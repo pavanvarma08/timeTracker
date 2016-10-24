@@ -1,0 +1,7 @@
+My name is Alex Bramah-Lawani
+MY name is siva kumar and I love programming with Signal Processing.
+<<<<<<< HEAD
+my name is vinaykanth devu
+=======
+my name is vinaykanth devu and I am here
+>>>>>>> c42ec71d0b609a7157748d66b69658197c42113e
