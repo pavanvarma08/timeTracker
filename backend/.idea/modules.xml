@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/softhouseTimeTrackerID.iml" filepath="$PROJECT_DIR$/.idea/modules/softhouseTimeTrackerID.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/softhouseTimeTrackerID_main.iml" filepath="$PROJECT_DIR$/.idea/modules/softhouseTimeTrackerID_main.iml" group="softhouseTimeTrackerID" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/softhouseTimeTrackerID_test.iml" filepath="$PROJECT_DIR$/.idea/modules/softhouseTimeTrackerID_test.iml" group="softhouseTimeTrackerID" />
+    </modules>
+  </component>
+</project>
