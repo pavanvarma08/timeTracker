@@ -10,7 +10,7 @@ import java.util.List;
 @RegisterMapperFactory(BeanMapperFactory.class)
 public interface UserDAO {
 
-    @SqlUpdate("CREATE TABLE IF NOT EXISTS User(userId int auto_increment primary key, username varchar(12), password varchar(12), firstname string, lastname string, adminCheck boolean)")
+    @SqlUpdate("CREATE TABLE IF NOT EXISTS User(userId int auto_increment primary key, username varchar(12), password varchar(12), firstname varchar, lastname varchar, adminCheck boolean)")
     void createTable();
 
     @SqlUpdate("INSERT INTO `User` VALUES(:userId, :username, :password, :firstname, :lastname, :adminCheck)")
