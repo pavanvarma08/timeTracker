@@ -1,7 +1,15 @@
 package process;
 
-/**
- * Created by Alex on 21/10/2016.
- */
-public class UserProcess {
+
+import db.entity.User;
+
+import javax.ws.rs.NotFoundException;
+import java.util.List;
+
+public interface UserProcess {
+    List<User> list();
+    User create(User user);
+    User update(Integer userId, User user) throws NotFoundException;
+    User find(Integer userId) throws NotFoundException;
+    void delete(Integer userId);
 }

@@ -5,8 +5,11 @@
  */
 
 import db.ActivityDAO;
+import db.UserDAO;
 import process.ActivityProcess;
 import process.ActivityProcessDbImpl;
+import process.UserProcess;
+import process.UserProcessDbImpl;
 import resource.ActivityResource;
 import com.bazaarvoice.dropwizard.assets.ConfiguredAssetsBundle;
 import io.dropwizard.Application;
@@ -15,11 +18,9 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import org.h2.tools.Server;
 import org.skife.jdbi.v2.DBI;
+import resource.UserResource;
 
 
-/**
- * Created by Alex on 21/10/2016.
- */
 @SuppressWarnings("deprecation")
 public class TheTimeTrackerApplication extends Application<TimeTrackerConfiguration> {
     @Override
@@ -32,18 +33,23 @@ public class TheTimeTrackerApplication extends Application<TimeTrackerConfigurat
         h2db.start();
 
         // data access objects
+        final UserDAO userDAO = dbi.onDemand(UserDAO.class);
         final ActivityDAO activityDAO = dbi.onDemand(ActivityDAO.class);
 
         // tables
+        userDAO.createTable();
         activityDAO.createTable();
 
         // processes
+        UserProcess userprocess = new UserProcessDbImpl(userDAO);
         ActivityProcess activityProcess = new ActivityProcessDbImpl(activityDAO);
 
         // resources
+        UserResource userResource = new UserResource(userprocess);
         ActivityResource activityResource = new ActivityResource(activityProcess);
 
         // environment
+       environment.jersey().register(userResource);
         environment.jersey().register(activityResource);
     }
 
