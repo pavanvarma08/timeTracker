@@ -1,6 +1,6 @@
-package backend.process;
+package process;
 
-import backend.db.entity.Activity;
+import db.entity.Activity;
 
 import javax.ws.rs.NotFoundException;
 import java.util.List;

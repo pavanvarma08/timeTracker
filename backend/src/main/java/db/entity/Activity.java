@@ -1,4 +1,4 @@
-package backend.db.entity;
+package db.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.validator.constraints.NotEmpty;

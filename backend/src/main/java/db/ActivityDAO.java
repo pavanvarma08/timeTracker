@@ -1,6 +1,6 @@
-package backend.db;
+package db;
 
-import backend.db.entity.Activity;
+import db.entity.Activity;
 import org.skife.jdbi.v2.sqlobject.*;
 
 import java.util.List;

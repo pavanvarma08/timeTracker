@@ -1,4 +1,4 @@
-package backend;
+//package backend;
 
 import com.bazaarvoice.dropwizard.assets.AssetsBundleConfiguration;
 import com.bazaarvoice.dropwizard.assets.AssetsConfiguration;

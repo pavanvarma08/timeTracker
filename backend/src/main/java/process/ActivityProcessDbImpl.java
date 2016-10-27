@@ -1,7 +1,7 @@
-package backend.process;
+package process;
 
-import backend.db.ActivityDAO;
-import backend.db.entity.Activity;
+import db.ActivityDAO;
+import db.entity.Activity;
 
 import javax.ws.rs.NotFoundException;
 import java.util.List;

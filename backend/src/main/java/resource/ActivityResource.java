@@ -1,7 +1,7 @@
-package backend.resource;
+package resource;
 
-import backend.db.entity.Activity;
-import backend.process.ActivityProcess;
+import db.entity.Activity;
+import process.ActivityProcess;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;

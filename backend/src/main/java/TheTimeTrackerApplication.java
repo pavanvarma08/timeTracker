@@ -1,13 +1,13 @@
-package backend;
+//package backend;
 
 /**
  * Created by Alex on 24/10/2016.
  */
 
-import backend.db.ActivityDAO;
-import backend.process.ActivityProcess;
-import backend.process.ActivityProcessDbImpl;
-import backend.resource.ActivityResource;
+import db.ActivityDAO;
+import process.ActivityProcess;
+import process.ActivityProcessDbImpl;
+import resource.ActivityResource;
 import com.bazaarvoice.dropwizard.assets.ConfiguredAssetsBundle;
 import io.dropwizard.Application;
 import io.dropwizard.jdbi.DBIFactory;
