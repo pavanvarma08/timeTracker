@@ -1,0 +1,478 @@
+<html>
+<head>
+    <title>TIME TRACKER</title>
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link href="./App/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./App/css/styles.css" rel="stylesheet">
+    <link href="./App/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!---fixed navigation bar with dropdown menu---->
+
+<div class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+        <a href="#" class="navbar-brand">TIME TRACKER APP</a>
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+
+        </button>
+        <div class="collapse navbar-collapse navHeaderCollapse">
+
+            <ul class="nav navbar-nav navbar-right ">
+                <li class="active"><a href="#">Home</a> </li>
+                <li><a href="#">About Us</a> </li>
+                <li class="dropdown">
+                    <a href="#"class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">HIRE US</a> </li>
+                        <li><a href="#">OUR WORK WITH SOFTHOUSE AB</a> </li>
+
+                    </ul>
+                </li>
+                <li><a href="#">Business Opportunity</a> </li>
+                <li><a href="#contact" data-toggle="modal">Contact Us</a> </li>
+            </ul>
+
+
+        </div>
+
+    </div>
+</div>
+<!-----Carousel----->
+<div id="myCarousel"class="carousel slide">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2" ></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4" ></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+
+    </ol>
+    <div class="carousel-inner">
+
+
+        <div class="item active">
+            <div class="container">
+                <center><img src="./App/Images/carousel/1.png" width="100%"></center>
+                <div class="carousel-caption">
+                    <H1>TIME IS MONEY</H1>
+                    <p>OUR APP MEASURES YOUR TIME</p>
+                    <p><a class="btn btn-large btn-primary">Sign Up</a></p>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="item ">
+            <div class="container">
+                <center><img src="./App/Images/carousel/2.png"width="100%"></center>
+                <div class="carousel-caption">
+                    <H1>Time Flies </H1>
+                    <p>Use time wisely</p>
+                    <p><a class="btn btn-large btn-primary">Sign Up</a></p>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="item ">
+            <div class="container">
+                <center><img src="./App/Images/carousel/3.png"width="100%"></center>
+                <div class="carousel-caption">
+                    <H1></H1>
+                    <p>Win a cruise across the Atlantic Ocean</p>
+                    <p><a class="btn btn-large btn-primary">Sign Up</a></p>
+                </div>
+
+
+            </div>
+
+
+        </div><div class="item ">
+        <div class="container">
+            <center><img src="./App/Images/carousel/4.png"width="100%"></center>
+            <div class="carousel-caption">
+                <H1>Carousel Caption</H1>
+                <p>Carousel Text</p>
+                <p><a class="btn btn-large btn-primary">Sign Up</a></p>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+        <div class="item ">
+            <div class="container">
+                <center><img src="./App/Images/carousel/5.png"width="100%"></center>
+                <div class="carousel-caption">
+                    <H1>Time Flies</H1>
+                    <p>So don't leave the windows open</p>
+                    <p><a class="btn btn-large btn-primary">Sign Up</a></p>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+
+<!-----Simple Thumbnails----->
+<div class="container">
+    <!--div class="row">
+    <div class="col-md-12"><hr/>
+    <h2>Image Classes</h2>
+
+    </div>
+    </div-->
+    <div class="row">
+        <div class="col-md-4"><br/>
+            <div class="thumbnail">
+                <img class= "img-rounded img-thumbnail" src="./App/Images/about-us.gif"/>
+
+                <div class="caption">
+                    <H3><a href="#">About Us</a></H3>
+                    <p>We are a group of BTH students undergoing training at Softhouse as part of a training that helps us to know how it is to work in industry</p>
+                    <p><a href="#" class="btn btn-success">Learn More</a></p><hr/>
+
+                    <H3><a href="#">Features of our product</a></H3>
+
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#section1">
+                                        Admin benefits
+                                    </a>
+
+                                </h4>
+                            </div>
+                            <div class="panel collapse collapse in" id="section1">
+                                <div class="panel-body" ><br/>
+                                    <p>Know what your workers did</p>
+                                    <p>Know who did not attend to work</p>
+                                    <p>Know who is to be considered for promotion</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#section2">
+                                        User Benefits
+                                    </a>
+
+                                </h4>
+                            </div>
+                            <div class="panel collapse collapse " id="section2">
+                                <div class="panel-body" ><br/>
+                                    <p>Self appraisement</p>
+                                    <p>Develop time management principles</p>
+                                    <p>Know what activity needs more time</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#section3">
+                                        Why you should hire us
+                                    </a>
+
+                                </h4>
+                            </div>
+                            <div class="panel collapse collapse " id="section3">
+                                <div class="panel-body" >
+                                    This will contain some text
+                                </div>
+                            </div>
+                        </div><br/><p><a href="#" class="btn btn-success">Learn More</a></p>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+        <div class="col-md-4"><br/>
+            <div class="thumbnail">
+                <img class= "img-rounded img-thumbnail" src="./App/Images/our-members.gif"/>
+
+                <div class="caption">
+                    <H3><a href="#">Our Approach</a></H3>
+
+                    Lean Scrum<br>
+                    Dropwizard<br>
+                    AngularJS<br>
+
+                    <p></p>
+                    <p><a href="#" class="btn btn-success">Learn More</a></p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="col-md-4"><br/>
+            <div class="thumbnail">
+                <img class= "img-rounded img-thumbnail" src="./App/Images/our-philosophy.gif"/>
+
+                <div class="caption">
+                    <H3><a href="#">Login page</a></H3>
+                   To be created by Jodi
+                    <p></p>
+                    <p><a href="#" class="btn btn-success">Learn More</a></p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!--Activity Panel-->
+<div class="container">
+    <!--div class="row">
+    <div class="col-md-12"><hr/>
+    <h2>Image Classes</h2>
+
+    </div>
+    </div-->
+    <div class="row">
+        <div class="col-md-12"><br/>
+
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a data-toggle="tab" href="#view">View Activities</a></li>
+                <li role="presentation"><a data-toggle="tab" href="#add">Add Activities</a></li>
+                <li role="presentation"><a data-toggle="tab" href="#find">Find Activities</a></li>
+                <li role="presentation"><a data-toggle="tab" href="#delete">Delete Activities</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="view" class="tab-pane fade in active">
+                    <div class="col-md-4"><br/>
+                    <!--h3>View All Activities</h3-->
+                    <div class="caption">
+
+                        <H3><a href="#">View All Activities</a></H3>
+
+                        <div class="panel-group" id="ActivityAccordion">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#ActivityAccordion" href="#activity1">
+                                            Creation of login pages: Estimated time 5 hours
+                                        </a>
+
+                                    </h4>
+                                </div>
+                                <div class="panel collapse collapse in" id="activity1">
+                                    <div class="panel-body" ><br/>
+                                        <p>Jothyi</p>
+                                        <p>Pavan</p>
+                                        <p>Vinay</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-danger">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#ActivityAccordion" href="#activity2">
+                                            Drawing of Gantt Charts
+                                        </a>
+
+                                    </h4>
+                                </div>
+                                <div class="panel collapse collapse " id="activity2">
+                                    <div class="panel-body" ><br/>
+                                        <p>Shiva</p>
+                                        <p>Amulya</p>
+                                        <p>Thomas</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#ActivityAccordion" href="#activity3">
+                                            Creation of databases
+                                        </a>
+
+                                    </h4>
+                                </div>
+                                <div class="panel collapse collapse " id="activity3">
+                                    <div class="panel-body" >
+                                        <p>Prasad</p>
+                                        <p>Raju</p>
+                                        <p>Alex Bramah-Lawani</p>
+                                    </div>
+                                </div>
+                            </div><br/><p><a href="#" class="btn btn-success">Learn More</a></p>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div id="add" class="tab-pane fade">
+                    <h3>Add Activities</h3>
+                    <p>Some content in menu 1.</p>
+                </div>
+                <div id="find" class="tab-pane fade">
+                    <h3>Find an activity</h3>
+                    <p>Some content in menu 2.</p>
+                </div>
+                <div id="delete" class="tab-pane fade">
+                    <h3>delete an activity</h3>
+                    <p>Some content in menu 2.</p>
+                </div>
+            </div>
+
+
+
+
+    </div>
+</div>
+
+
+<!-------font-awesome
+=====================------>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well">
+                <center>
+                    <a href="#"><i class="largeIcon fa fa-android"></i></a>
+                    <a href="#"><i class="largeIcon fa fa-facebook"></i></a>
+                    <a href="#"><i class="largeIcon fa fa-twitter"></i></a>
+                    <a href="#"><i class="largeIcon fa fa-youtube"></i></a>
+                    <a href="#"><i class="largeIcon fa fa-skype"></i></a>
+                    <a href="#"><i class="largeIcon fa fa-google-plus"></i></a>
+                    <a href="#"><i class="largeIcon fa fa-windows"></i></a>
+                </center>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<!------footer----->
+<div class="navbar navbar-inverse navbar-fixed-bottom">
+
+    <div class="container">
+
+
+
+
+
+        <p class="navbar-text pull-left">
+            Copyright Group 3 Softhouse Training October 2016</p>
+
+
+        <a href="#" class="navbar-btn btn-danger btn pull-right">Subscribe on Youtube</a>
+    </div>
+
+</div>
+
+<div class="modal fade" id="contact" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form-horizontal">
+                <div class="modal-header">
+                    <p><h4>Contact Group 3 Softhouse Training October 2016</h4></p>
+
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label for="contact-name" class="col-lg-2 control-label">Name:</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="contact-name" placeholder="full name"></input>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email" class="col-lg-2 control-label">Email:</label>
+                        <div class="col-lg-10">
+                            <input type="email" class="form-control" id="contact-email" placeholder="you@example.com"></input>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-msg" class="col-lg-2 control-label">Message:</label>
+                        <div class="col-lg-10">
+                            <textarea type="text" class="form-control" id="contact-msg" rows="8" placeholder="Please type your message"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit" >Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="./App/js/angular.min.js"></script>
+<script src="./App/js/angular-route.min.js"></script>
+<script src="./App/js/bootstrap.min.js"></script>
+<script src="App/Services/Activity.Service.js"></script>
+<script src="App/Controllers/Activity.Controllers.js"></script>
+<script src="App/Controllers/Activities.Controllers.js"></script>
+<script src="App/Forms/Activity-Form.js"></script>
+<script src="App/config.js"></script>
+<script src="App/app.js"></script>
+
+</body>
+</html>
+
+
+<!doctype html>
+<html ng-app="app">
+<head>
+    <title>TimeTracer App</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+<p>Hi Alex</p>
+<ng-view></ng-view>
+</body>
+
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="app/Services/Activity.Service.js"></script>
+<script src="app/Controllers/Activity.Controllers.js"></script>
+<script src="app/Controllers/Activities.Controllers.js"></script>
+<script src="app/Forms/Activity-Form.js"></script>
+<script src="app/config.js"></script>
+<script src="app/app.js"></script>
+</html>
