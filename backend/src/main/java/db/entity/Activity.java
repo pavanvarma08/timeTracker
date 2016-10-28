@@ -4,9 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.joda.time.DateTime;
 
-/**
- * Created by Alex on 21/10/2016.
- */
+
 public class Activity {
     @JsonProperty
     @NotEmpty

@@ -7,7 +7,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class User {
 
     @JsonProperty
-    private Integer userId;
+    private Integer userID;
 
     @JsonProperty
     @NotEmpty
@@ -33,9 +33,9 @@ public class User {
 
     public User() {}
 
-    public User (Integer userId, String username, String password, String firstname, String lastname, Boolean adminCheck)
+    public User (Integer userID, String username, String password, String firstname, String lastname, Boolean adminCheck)
     {
-        this.userId = userId;
+        this.userID = userID;
         this.username = username;
         this.password = password;
         this.firstname = firstname;
@@ -43,9 +43,9 @@ public class User {
         this.adminCheck = adminCheck;
     }
 
-    public Integer getUserId(){ return userId;}
+    public Integer getUserId(){ return userID;}
 
-    public void setUserId( Integer user_id) { this.userId = user_id;}
+    public void setUserId( Integer userID) { this.userID = userID;}
 
     public String getUsername() { return username;}
 
