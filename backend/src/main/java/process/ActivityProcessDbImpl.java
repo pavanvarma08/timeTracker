@@ -33,8 +33,8 @@ public class ActivityProcessDbImpl implements ActivityProcess {
         Activity activity = this.find(ActivityID);
 
         activity.setAdminID(updatedActivity.getAdminID());
-        activity.setActivityName(updatedActivity.getActivityName());
-        activity.setActivityDescription(updatedActivity.getActivityDescription());
+        activity.setTitle(updatedActivity.getTitle());
+        activity.setDescription(updatedActivity.getDescription());
 
 
 
@@ -51,7 +51,7 @@ public class ActivityProcessDbImpl implements ActivityProcess {
     }
 
     @Override
-    public void delete(Integer id) {
-        this.activityDAO.deleteBy(id);
+    public void delete(Integer ActivityID) {
+        this.activityDAO.deleteBy(ActivityID);
     }
 }

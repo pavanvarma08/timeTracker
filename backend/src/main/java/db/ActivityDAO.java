@@ -9,17 +9,17 @@ import java.util.List;
  * Created by Alex on 21/10/2016.
  */
 public interface ActivityDAO {
-    @SqlUpdate("CREATE TABLE IF NOT EXISTS activity(ActivityID int auto_increment primary key, ActivityName varchar(25), ActivityDescription varchar(255), AdminID int, UserID int, DateCreated Timestamp, TimeLoggedIn Timestamp, TimeLoggedOut Timestamp )")
+    @SqlUpdate("CREATE TABLE IF NOT EXISTS activity(activityID int auto_increment primary key, adminID int, title varchar(25), description varchar(255) )")
     void createTable();
-    @SqlUpdate("INSERT INTO `activity` VALUES(:ActivityID, :AdminID, :UserID, :ActivityName, :ActivityDescription,:DateCreated, :TimeLoggedIn, :TimeLoggedOut)")
+    @SqlUpdate("INSERT INTO `activity` VALUES(:activityID, :adminID,  :title, :description,)")
     @GetGeneratedKeys
     int create(@BindBean Activity activity);
     @SqlQuery("SELECT * FROM `activity`")
     List<Activity> list();
-    @SqlQuery("SELECT * FROM `activity` WHERE ActivityID = :ActivityID")
-    Activity findBy(@Bind("ActivityID") int ActivityID);
-    @SqlUpdate("DELETE FROM `activity` WHERE ActivityID = :ActivityID")
-    int deleteBy(@Bind("ActivityID") int ActivityID);
-    @SqlUpdate("UPDATE `activity` SET AdminID = :AdminID, ActivityName = :ActivityName, ActivityDescription = :ActivityDescription WHERE ActivityID = :ActivityID")
+    @SqlQuery("SELECT * FROM `activity` WHERE activityID = :activityID")
+    Activity findBy(@Bind("activityID") int activityID);
+    @SqlUpdate("DELETE FROM `activity` WHERE activityID = :activityID")
+    int deleteBy(@Bind("activityID") int activityID);
+    @SqlUpdate("UPDATE `activity` SET adminID = :adminID, title = :title, description = :description WHERE activityID = :activityID")
     Integer update(@BindBean Activity activity);
 }
