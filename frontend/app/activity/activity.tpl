@@ -1,6 +1,7 @@
 <div ng-switch on="vm.isEditingActivity">
     <div class="panel panel-default" ng-switch-when="false">
         <div class="panel-heading">
+
             <h3 class="panel-title pull-left">{{vm.data.title}}</h3>
             <div class="pull-right">
                 <a ng-click="vm.editActivity()" class="btn btn-xs btn-info">Edit</a>

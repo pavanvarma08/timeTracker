@@ -27,7 +27,7 @@ function activityService($http, $interpolate) {
         return $http.delete(activity({ activityID: activityID }));
     }
 
-    function update(ActivityID, adminID, title, description) {
+    function update(activityID, adminID, title, description) {
         var data = {
 
             adminID: adminID,
