@@ -10,31 +10,26 @@ function ActivityFormController(activityService) {
 
     function $onInit() {
         var parentControllerHasSetData = angular.isDefined(vm.data);
-        vm.AdminID = parentControllerHasSetData ? vm.data.AdminID : '';
-        vm.UserID  = parentControllerHasSetData ? vm.data.UserID  : '';
-        vm.ActivityName = parentControllerHasSetData ? vm.data.ActivityName : '';
-        vm.ActivityDescription  = parentControllerHasSetData ? vm.data.ActivityDescription  : '';
-        vm.DateCreated = parentControllerHasSetData ? vm.data.DateCreated : '';
-        vm.TimeLoggedIn  = parentControllerHasSetData ? vm.data.TimeLoggedIn  : '';
-        vm.TimeLoggedOut  = parentControllerHasSetData ? vm.data.TimeLoggedOut  : '';
+        vm.adminID = parentControllerHasSetData ? vm.data.adminID : '';
+
+        vm.title = parentControllerHasSetData ? vm.data.title : '';
+        vm.description  = parentControllerHasSetData ? vm.data.description  : '';
+
 
     }
 
-    function onUserDidSubmit(AdminID, UserID, ActivityName, ActivityDescription,DateCreated, TimeLoggedIn, TimeLoggedOut) {
-        return activityService.create(AdminID, UserID, ActivityName, ActivityDescription,DateCreated, TimeLoggedIn, TimeLoggedOut)
+    function onUserDidSubmit(adminID, title, description) {
+        return activityService.create(adminID, title, description)
             .then(vm.activitiesController.refreshActivities)
             .then(onUserDidReset)
             .catch(vm.showError);
     }
 
     function onUserDidReset() {
-        vm.AdminID = '';
-        vm.UserID  = '';
+        vm.adminID = '';
         vm.ActivityName = '';
         vm.ActivityDescription  = '';
-        vm.DateCreated = '';
-        vm.TimeLoggedIn  = '';
-        vm.TimeLoggedOut  =  '';
+
 
         vm.activityForm.$setPristine();
         vm.activityForm.$setUntouched();

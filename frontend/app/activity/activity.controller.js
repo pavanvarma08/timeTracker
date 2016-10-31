@@ -24,8 +24,8 @@ function ActivityController(activityService) {
             .then(vm.activitiesController.refreshActivities);
     }
 
-    function submitEditedActivity(AdminID, UserID, ActivityName, ActivityDescription,DateCreated, TimeLoggedIn, TimeLoggedOut) {
-        return activityService.update(vm.data.ActivityID, AdminID, UserID, ActivityName, ActivityDescription,DateCreated, TimeLoggedIn, TimeLoggedOut)
+    function submitEditedActivity(adminID, title, description) {
+        return activityService.update(vm.data.ActivityID, adminID, title, description)
             .then(vm.activitiesController.refreshActivities)
             .then(vm.resetEditedActivity)
             .catch(vm.showError);

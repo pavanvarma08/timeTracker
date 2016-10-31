@@ -1,5 +1,5 @@
 function activityService($http, $interpolate) {
-    var activity = $interpolate('/api/activity/{{ActivityID}}');
+    var activity = $interpolate('/api/activity/{{activityID}}');
 
     return {
         list: list,
@@ -12,37 +12,30 @@ function activityService($http, $interpolate) {
         return $http.get(activity());
     }
 
-    function create(ActivityID, AdminID, UserID, ActivityName, ActivityDescription,DateCreated, TimeLoggedIn, TimeLoggedOut) {
+    function create(adminID, title, description) {
         var data = {
-            ActivityID: ActivityID,
-            AdminID: AdminID,
-            UserID: UserID,
-            ActivityName: ActivityName,
-            ActivityDescription: ActivityDescription,
-            DateCreated: DateCreated,
-            TimeLoggedIn: TimeLoggedIn,
-            TimeLoggedOut: TimeLoggedOut
+            adminID: adminID,
+            title: title,
+            description: description
+
         };
 
         return $http.post(activity(), data);
     }
 
-    function destroy(ActivityID) {
-        return $http.delete(activity({ ActivityID: ActivityID }));
+    function destroy(activityID) {
+        return $http.delete(activity({ activityID: activityID }));
     }
 
-    function update(ActivityID, AdminID, UserID, ActivityName, ActivityDescription,DateCreated, TimeLoggedIn, TimeLoggedOut) {
+    function update(ActivityID, adminID, title, description) {
         var data = {
-            ActivityID: ActivityID,
-            AdminID: AdminID,
-            UserID: UserID,
-            ActivityName: ActivityName,
-            ActivityDescription: ActivityDescription,
-            DateCreated: DateCreated,
-            TimeLoggedIn: TimeLoggedIn,
-            TimeLoggedOut: TimeLoggedOut
+
+            adminID: adminID,
+            title: title,
+            description: description
+
         };
 
-        return $http.put(activity({ ActivityID: ActivityID }), data);
+        return $http.put(activity({ activityID: activityID }), data);
     }
 }

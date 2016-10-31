@@ -8,6 +8,7 @@ import javax.ws.rs.NotFoundException;
 import java.util.List;
 import java.util.Optional;
 
+@SuppressWarnings("deprecation")
 public class UserProcessDbImpl implements UserProcess{
 
     private UserDAO userDAO;

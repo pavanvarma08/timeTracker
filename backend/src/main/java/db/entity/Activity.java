@@ -7,7 +7,7 @@ import org.joda.time.DateTime;
 
 public class Activity {
     @JsonProperty
-    @NotEmpty
+
     private int activityID;
 
     @JsonProperty
@@ -15,10 +15,10 @@ public class Activity {
     private int adminID;
     @JsonProperty
     @NotEmpty
-    private int title;
+    private String title;
     @JsonProperty
     @NotEmpty
-    private int description;
+    private String description;
 
 
 
@@ -29,7 +29,7 @@ public class Activity {
     }
 
 
-    public Activity(int activityID, int adminID, int title, int description ) {
+   /* public Activity(int activityID, int adminID, String title, String description ) {
         this.activityID = activityID;
         this.adminID = adminID;
         this.title = title;
@@ -37,7 +37,7 @@ public class Activity {
 
 
     }
-
+*/
 
 
     public int getActivityID() {
@@ -58,19 +58,19 @@ public class Activity {
 
 
 
-    public int getTitle() {
+    public String getTitle() {
         return title;
     }
 
-    public void setTitle(int title) {
+    public void setTitle(String title) {
         this.title = title;
     }
 
-    public int getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription(int description) {
+    public void setDescription(String description) {
         this.description = description;
     }
     }

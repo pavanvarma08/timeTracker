@@ -36,7 +36,7 @@ public class ActivityResource {
     }
 
     @POST
-    public Activity createActivity(@NotNull @Valid Activity activity) {
+    public Activity createActivity(@NotNull  Activity activity) {
         return this.activityProcess.create(activity);
     }
 

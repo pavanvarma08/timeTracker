@@ -22,9 +22,10 @@ public interface TimeLogDAO {
 
     @SqlQuery(" SELECT * FROM `timelog` WHERE userID = :userID")
     TimeLog findByUser(@Bind("userID") int userID);
-
+//I don't think we should allow for deleting time logs, that is a security breach, note by Alex Bramah-Lawani
     @SqlUpdate("DELTE FROM `timelog` WHERE activityID = :activityID")
     int deleteByActivity(@Bind("activityID") int activityID);
+//I don't think we should allow for deleting time logs, that is a security breach, note by Alex Bramah-Lawani
 
     @SqlUpdate("DELETE FROM `timelog` WHERE userID = :userID")
     int deleteByUser (@Bind("userID") int userID);
