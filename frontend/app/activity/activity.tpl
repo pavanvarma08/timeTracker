@@ -9,8 +9,8 @@
 
             <div class="clearfix"></div>
         </div>
-        <div class="panel-body">{{vm.data.text}}</div>
+        <div class="panel-body">{{vm.data.description}}</div>
     </div>
 
-    <note-form ng-switch-when="true" data="vm.data" on-submit="vm.submitEditedActivity" on-reset="vm.resetEditedNote"></note-form>
+    <activity-form ng-switch-when="true" data="vm.data" on-submit="vm.submitEditedActivity" on-reset="vm.resetEditedActivity"></activity-form>
 </div>

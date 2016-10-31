@@ -27,8 +27,8 @@ function ActivityFormController(activityService) {
 
     function onUserDidReset() {
         vm.adminID = '';
-        vm.ActivityName = '';
-        vm.ActivityDescription  = '';
+        vm.title = '';
+        vm.description  = '';
 
 
         vm.activityForm.$setPristine();

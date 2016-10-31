@@ -6,7 +6,7 @@
 
         <div class="col-xs-12 text-center" ng-if="!vm.hasActivities()">
             <div class="alert alert-info" role="alert">
-                <h4>Oh no!</h4>
+                <h4>Please populate activities list</h4>
                 <p>There are no activities yet.</p>
             </div>
         </div>

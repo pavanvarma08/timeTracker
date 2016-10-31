@@ -8,7 +8,7 @@
         <div class="form-group">
 
   <label class="col-md-4 control-label" for="title">Activity title</label>
-            <input id="title" name="title" class="form-control" ng-model="vm.title" type="title" placeholder="Titile of activity" autocomplete="off" required = " ">
+            <input id="title" name="title" class="form-control" ng-model="vm.title" type="title" placeholder="Title of activity" autocomplete="off" required = " ">
         </div>
 
         <div class="form-group">
