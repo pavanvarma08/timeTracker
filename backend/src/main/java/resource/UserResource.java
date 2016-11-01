@@ -30,7 +30,7 @@ public class UserResource {
     public User getUser(@PathParam("userID") Integer userID) { return this.userProcess.find(userID);}
 
     @POST
-    public User createUser(@NotNull @Valid User user) { return this.userProcess.create(user);}
+    public User createUser(@NotNull User user) { return this.userProcess.create(user);}
 
     @PUT
     @Path("/{userID}")

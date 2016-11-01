@@ -7,6 +7,9 @@ import java.util.Date;
 public class TimeLog {
 
     @JsonProperty
+    private Integer timeID;
+
+    @JsonProperty
     private Date date;
 
     @JsonProperty
@@ -20,12 +23,17 @@ public class TimeLog {
 
     public TimeLog() {}
 
-    public TimeLog( Date date, float time, Integer activityID, Integer userID) {
+    public TimeLog( Integer timeID, Date date, float time, Integer activityID, Integer userID) {
+        this.timeID= timeID;
         this.date = date;
         this.time = time;
         this.activityID = activityID;
         this.userID = userID;
     }
+
+    public Integer getTimeID() { return timeID;}
+
+    public void setTimeID( Integer timeID) {this.timeID = timeID;}
 
     public Date getDate(){ return date;}
 

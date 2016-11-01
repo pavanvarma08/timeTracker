@@ -16,7 +16,6 @@ public class User {
 
     @JsonProperty
     @NotEmpty
-    @Length(min=8, message=" atleast 8 characters" )
     private String password;
 
     @JsonProperty

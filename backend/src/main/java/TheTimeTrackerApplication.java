@@ -1,15 +1,8 @@
-//package backend;
-
-/**
- * Created by Alex on 24/10/2016.
- */
 
 import db.ActivityDAO;
 import db.UserDAO;
-import process.ActivityProcess;
-import process.ActivityProcessDbImpl;
-import process.UserProcess;
-import process.UserProcessDbImpl;
+import db.TimeLogDAO;
+import process.*;
 import resource.ActivityResource;
 import com.bazaarvoice.dropwizard.assets.ConfiguredAssetsBundle;
 import io.dropwizard.Application;
@@ -18,6 +11,7 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import org.h2.tools.Server;
 import org.skife.jdbi.v2.DBI;
+import resource.TimeLogResource;
 import resource.UserResource;
 
 
@@ -35,22 +29,28 @@ public class TheTimeTrackerApplication extends Application<TimeTrackerConfigurat
         // data access objects
         final UserDAO userDAO = dbi.onDemand(UserDAO.class);
         final ActivityDAO activityDAO = dbi.onDemand(ActivityDAO.class);
+        final TimeLogDAO timeLogDAO = dbi.onDemand(TimeLogDAO.class);
 
         // tables
         userDAO.createTable();
         activityDAO.createTable();
+        timeLogDAO.createTable();
+
 
         // processes
         UserProcess userprocess = new UserProcessDbImpl(userDAO);
         ActivityProcess activityProcess = new ActivityProcessDbImpl(activityDAO);
+        TimeLogProcess timeLogProcess = new TimeLogProcessDbimpl(timeLogDAO);
 
         // resources
         UserResource userResource = new UserResource(userprocess);
         ActivityResource activityResource = new ActivityResource(activityProcess);
+        TimeLogResource timeLogResource = new TimeLogResource(timeLogProcess);
 
         // environment
        environment.jersey().register(userResource);
         environment.jersey().register(activityResource);
+        environment.jersey().register(timeLogProcess);
     }
 
     @Override
