@@ -7,6 +7,7 @@ import javax.ws.rs.NotFoundException;
 import java.util.List;
 import java.util.Optional;
 
+@SuppressWarnings("deprecation")
 public class TimeLogProcessDbimpl implements TimeLogProcess {
     private TimeLogDAO timelogDAO;
 

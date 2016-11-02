@@ -1,6 +1,8 @@
 package resource;
 
 import db.entity.TimeLog;
+import javassist.*;
+import javassist.NotFoundException;
 import process.TimeLogProcess;
 
 import javax.validation.Valid;
@@ -26,7 +28,7 @@ public class TimeLogResource {
 
     @GET
     @Path("/{timeID}")
-       public TimeLog getTimeLog(@PathParam("timeID") Integer timeID) {
+       public TimeLog getTimeLog(@PathParam("timeID") Integer timeID) throws javassist.NotFoundException {
        return this.timelogProcess.findTime(timeID);
     }
 
@@ -38,7 +40,7 @@ public class TimeLogResource {
 
     @PUT
     @Path("/{timeID}")
-    public TimeLog updateTimeLog(@PathParam("timeID") Integer timeID,@Valid TimeLog timelog) {
+    public TimeLog updateTimeLog(@PathParam("timeID") Integer timeID,@Valid TimeLog timelog) throws NotFoundException {
         return this.timelogProcess.update(timeID, timelog);}
 
 

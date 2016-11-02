@@ -6,10 +6,10 @@
                                                          <em>{{vm.data.description}}</em>
 
                                                          <div class="pull-right">
-                                                             <a ng-click="vm.editActivity()" class="btn btn-xs btn-info">Edit</a>
+                                                             <a ng-click="vm.editActivity()" class="btn btn-xs btn-info"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                              <a ng-click="vm.removeActivity()" class="btn btn-xs btn-danger">
 
-                                                                         <span class="glyphicon glyphicon-play"></span>
+                                                                         <i class="fa fa-trash-o" aria-hidden="true"></i>
                                                                        </a>
                                                          </div>
 
@@ -19,27 +19,23 @@
 
                       <div class="container-fluid">
                                               <div class="row">
-                                                  <div class="col-md-6 ">
+                                                  <div class="col-md-7 ">
 
                                                           <div class="form-group ">
-                                                             <div class="input-group date">
-                                                                       <input type="text" class="form-control" id="pickyDate"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
-                                                                     </div>
-                                                              <div class="input-group">
-                                                                  <div class="input-group-addon">
-                                                                      <i class="fa fa-calendar">
-                                                                      </i>
-                                                                  </div>
+                                                            <div class="container">
+                                                              <input type="date" >
+                                                            </div>
 
-                                                              </div>
+
                                                           </div>
 
 
                                                   </div>
-                                                  <div class="col-md-3">
+                                                  <div class="col-md-2">
 
                                                                                                              <div class="form-group">
-                                                                                                             <input id="hours" name="hours" class="form-control" ng-model="vm.adminID" type="hours" placeholder="hours worked" autocomplete="off" required = " ">
+                                                                                                                         <input id="title" name="title" class="form-control" ng-model="vm.title" type="title" placeholder="hours worked" autocomplete="off" required = " ">
+
                                                                                                                                   </div>
 
                                                                                                     </div>

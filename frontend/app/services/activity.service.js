@@ -18,6 +18,7 @@ function activityService($http, $interpolate) {
             title: title,
             description: description
 
+
         };
 
         return $http.post(activity(), data);

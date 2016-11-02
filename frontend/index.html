@@ -3,8 +3,9 @@
     <head>
         <title>ActivitiesApp</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-datepicker3.css">
 
+        <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/jquery.datetimepicker.min.css">
 
 
     </head>
@@ -24,11 +25,11 @@
      <script src="app/activity-form/activity-form.controller.js"></script>
      <script src="app/config.js"></script>
     <script src="app/app.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/jquery.datetimepicker.full.min.js"></script>
+    <script src="js/jquery.datetimepicker.full.js"></script>
     <script>
-        $(document).ready(function() {
-            $("#pickyDate").datepicker();
+        $('#pickyDate').datetimepicker({
         });
     </script>
+
 </html>

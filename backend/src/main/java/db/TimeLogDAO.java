@@ -10,10 +10,10 @@ import java.util.List;
 @RegisterMapperFactory(BeanMapperFactory.class)
 public interface TimeLogDAO {
 
-    @SqlUpdate("CREATE TABLE IF NOT EXISTS timelog(timeID int auto_increment primary key, date Date, time float, activityID int foreign key, userID int foreign key)")
+    @SqlUpdate("CREATE TABLE IF NOT EXISTS timelog(timeID int auto_increment primary key, date Date, time float, activityID int , userID int )")
     void createTable();
 
-    @SqlUpdate("INSERT INTO `timelog`(date, time, activityID, userID) VALUES(:date, :time, :activityID, :userID)")
+    @SqlUpdate("INSERT INTO `timelog`(date, time, activityID) VALUES(:date, :time, :activityID)")
     @GetGeneratedKeys
     int create(@BindBean TimeLog timelog);
 

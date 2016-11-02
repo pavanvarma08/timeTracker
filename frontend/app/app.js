@@ -15,6 +15,7 @@ angular.module('app', ['ngRoute'])
             onReset: '<'
         }
     })
+
     .component('activity', {
         templateUrl: 'app/activity/activity.tpl',
         controller: ActivityController,
@@ -28,6 +29,7 @@ angular.module('app', ['ngRoute'])
             data: '<'
         }
     })
+
     .component('activities', {
         templateUrl: 'app/activities/activities.tpl',
         controller: ActivitiesController,
@@ -35,4 +37,5 @@ angular.module('app', ['ngRoute'])
     })
     .component('navigation', { templateUrl: 'app/navigation/navigation.tpl' })
     .component('info', { templateUrl: 'app/info/info.tpl' })
+
     .config(appConfig);
