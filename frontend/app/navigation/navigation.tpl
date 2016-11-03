@@ -1,3 +1,16 @@
+
+<div class="page-header">
+<h4 class="pull-left"></h4>
+
+                   <div class="btn-group pull-right">
+                       <a ng-href="#/" class="btn btn-default">Home Page</a>
+                       <a ng-href="#/info" class="btn btn-default">User Page</a>
+                   </div>
+
+                   <div class="clearfix"></div>
+               </div>
+
+
 <div class="page-header">
 <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
