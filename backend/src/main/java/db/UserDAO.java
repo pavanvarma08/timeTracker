@@ -26,7 +26,7 @@ public interface UserDAO {
     @SqlUpdate("DELETE FROM `User` WHERE userID = :userID")
     int deleteBy(@Bind("userID") int userID);
 
-    @SqlUpdate("UPDATE `User` SET username = :username, password = :password, firstname = :firstname, lastname =:lastname, adminCheck = :adminCheck WHERE userID = :userID")
+    @SqlUpdate("UPDATE `User` SET username = :username, password = :password, firstname = :firstname, lastname =:lastname, adminCheck = :adminCheck WHERE userId = :userId")
     int update(@BindBean User user);
 
 }
