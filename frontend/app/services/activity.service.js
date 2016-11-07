@@ -17,8 +17,6 @@ function activityService($http, $interpolate) {
             adminID: adminID,
             title: title,
             description: description
-
-
         };
 
         return $http.post(activity(), data);

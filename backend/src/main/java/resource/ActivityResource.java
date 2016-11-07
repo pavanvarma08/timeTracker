@@ -30,9 +30,9 @@ public class ActivityResource {
     }
 
     @GET
-    @Path("/{ActivityID}")
-    public Activity getActivity(@PathParam("ActivityID") Integer ActivityID) {
-        return this.activityProcess.find(ActivityID);
+    @Path("/{activityID}")
+    public Activity getActivity(@PathParam("activityID") Integer activityID) {
+        return this.activityProcess.find(activityID);
     }
 
     @POST
@@ -41,14 +41,14 @@ public class ActivityResource {
     }
 
     @PUT
-    @Path("/{ActivityID}")
-    public Activity updateActivity(@PathParam("ActivityID") Integer ActivityID, @Valid Activity activity) {
-        return this.activityProcess.update(ActivityID, activity);
+    @Path("/{activityID}")
+    public Activity updateActivity(@PathParam("activityID") Integer activityID, @Valid Activity activity) {
+        return this.activityProcess.update(activityID, activity);
     }
 
     @DELETE
-    @Path("/{ActivityID}")
-    public void deleteNote(@PathParam("ActivityID") Integer ActivityID) {
-        this.activityProcess.delete(ActivityID);
+    @Path("/{activityID}")
+    public void deleteNote(@PathParam("activityID") Integer activityID) {
+        this.activityProcess.delete(activityID);
     }
 }

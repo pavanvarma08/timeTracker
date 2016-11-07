@@ -20,12 +20,12 @@ function ActivityController(activityService) {
     }
 
     function removeActivity() {
-        activityService.destroy(vm.data.ActivityID)
+        activityService.destroy(vm.data.activityID)
             .then(vm.activitiesController.refreshActivities);
     }
 
     function submitEditedActivity(adminID, title, description) {
-        return activityService.update(vm.data.ActivityID, adminID, title, description)
+        return activityService.update(vm.data.activityID, adminID, title, description)
             .then(vm.activitiesController.refreshActivities)
             .then(vm.resetEditedActivity)
             .catch(vm.showError);

@@ -41,13 +41,30 @@ angular.module('app', ['ngRoute'])
         }
     })
 
-    .component('activities', {
+    .component('activities',{
         templateUrl: 'app/activities/activities.tpl',
         controller: ActivitiesController,
-        controllerAs: 'vm'
+        controllerAs: 'vm',
     })
 
+    .component('timelog', {
+        templateUrl: 'app/info/timelog.tpl',
+        controller: ActivityController,
+        controllerAs: 'vm',
 
+        require: {
+            activitiesController: '^activities'
+        },
+
+        bindings: {
+            data: '<'
+        }
+    })
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 088c76e7bf17af95ed4cc2b2f615af583b6915f9
     .component('navigation', { templateUrl: 'app/navigation/navigation.tpl' })
     .component('info', { templateUrl: 'app/info/info.tpl' })
 

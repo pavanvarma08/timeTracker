@@ -3,6 +3,7 @@ package db.entity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.joda.time.DateTime;
+import org.skife.jdbi.v2.sqlobject.GetGeneratedKeys;
 
 
 public class Activity {
