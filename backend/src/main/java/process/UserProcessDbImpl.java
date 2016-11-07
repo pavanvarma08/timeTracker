@@ -22,7 +22,7 @@ public class UserProcessDbImpl implements UserProcess{
     public User create(User user) {return this.userDAO.findBy(this.userDAO.create(user)); }
 
     @Override
-    public User update(Integer userID, User updatedUser) throws NotFoundException {
+    public User update(int userID, User updatedUser) throws NotFoundException {
         User user = this.find(userID);
 
         user.setUsername( updatedUser.getUsername());
@@ -37,7 +37,7 @@ public class UserProcessDbImpl implements UserProcess{
     }
 
     @Override
-    public User find(Integer userID) throws NotFoundException {
+    public User find(int userID) throws NotFoundException {
 
         return Optional
                 .ofNullable(this.userDAO.findBy(userID))
@@ -45,5 +45,5 @@ public class UserProcessDbImpl implements UserProcess{
     }
 
     @Override
-    public void delete(Integer userID) { this.userDAO.deleteBy(userID);}
+    public void delete(int userID) { this.userDAO.deleteBy(userID);}
 }

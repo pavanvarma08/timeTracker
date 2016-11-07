@@ -50,7 +50,7 @@ public class TheTimeTrackerApplication extends Application<TimeTrackerConfigurat
         // environment
        environment.jersey().register(userResource);
         environment.jersey().register(activityResource);
-        environment.jersey().register(timeLogProcess);
+        environment.jersey().register(timeLogResource);
     }
 
     @Override
