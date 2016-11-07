@@ -1,7 +1,7 @@
 angular.module('app', ['ngRoute'])
     .factory('activityService', activityService)
     .component('activityForm', {
-        templateUrl: 'app/activity-form/activity-form.html',
+        templateUrl: 'app/activity-form/activity-form.tpl',
         controller: ActivityFormController,
         controllerAs: 'vm',
 
@@ -50,7 +50,7 @@ angular.module('app', ['ngRoute'])
         }
     })
 
-    .component('navigation', { templateUrl: 'app/navigation/navigation.html' })
-    .component('info', { templateUrl: 'app/info/info.html' })
+    .component('navigation', { templateUrl: 'app/navigation/navigation.tpl' })
+    .component('info', { templateUrl: 'app/info/info.tpl' })
 
     .config(appConfig);
