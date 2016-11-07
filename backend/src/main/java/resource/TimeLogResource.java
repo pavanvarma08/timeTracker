@@ -45,7 +45,7 @@ public class TimeLogResource {
 
 
     @DELETE
-    @Path("{timeID}")
+    @Path("/{timeID}")
     public void deleteTimeLog ( @PathParam("timeID") Integer timeID) {
         this.timelogProcess.delete(timeID);
     }

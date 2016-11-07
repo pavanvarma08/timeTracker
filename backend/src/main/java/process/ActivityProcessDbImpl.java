@@ -29,8 +29,8 @@ public class ActivityProcessDbImpl implements ActivityProcess {
     }
 
     @Override
-    public Activity update(Integer ActivityID, Activity updatedActivity) throws NotFoundException {
-        Activity activity = this.find(ActivityID);
+    public Activity update(Integer activityID, Activity updatedActivity) throws NotFoundException {
+        Activity activity = this.find(activityID);
 
         activity.setAdminID(updatedActivity.getAdminID());
         activity.setTitle(updatedActivity.getTitle());
@@ -44,14 +44,14 @@ public class ActivityProcessDbImpl implements ActivityProcess {
     }
 
     @Override
-    public Activity find(Integer ActivityID) throws NotFoundException {
+    public Activity find(Integer activityID) throws NotFoundException {
         return Optional
-                .ofNullable(this.activityDAO.findBy(ActivityID))
+                .ofNullable(this.activityDAO.findBy(activityID))
                 .orElseThrow(() -> new NotFoundException("activity does not exist"));
     }
 
     @Override
-    public void delete(Integer ActivityID) {
-        this.activityDAO.deleteBy(ActivityID);
+    public void delete(Integer activityID) {
+        this.activityDAO.deleteBy(activityID);
     }
 }

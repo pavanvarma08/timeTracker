@@ -11,8 +11,8 @@ import java.util.List;
 public interface ActivityProcess {
     List<Activity> list();
     Activity create(Activity activity);
-    Activity update(Integer ActivityID, Activity activity) throws NotFoundException;
-    Activity find(Integer ActivityID) throws NotFoundException;
-    void delete(Integer ActivityID);
+    Activity update(Integer activityID, Activity activity) throws NotFoundException;
+    Activity find(Integer activityID) throws NotFoundException;
+    void delete(Integer activityID);
 
 }

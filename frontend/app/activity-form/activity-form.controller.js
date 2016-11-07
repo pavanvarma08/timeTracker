@@ -3,8 +3,9 @@ function ActivityFormController(activityService) {
 
     vm.$onInit = $onInit;
 
-    vm.onSubmit = vm.onSubmit || onUserDidSubmit;
+    vm.sendActivity = vm.sendActivity || onUserDidSubmit;
     vm.onReset  = vm.onReset || onUserDidReset;
+    vm.sendTimelog = vm.sendTimelog || onUserSendTimelog;
 
     vm.showError = showError;
 
@@ -25,6 +26,13 @@ function ActivityFormController(activityService) {
             .catch(vm.showError);
     }
 
+    function onUserSendTimelog(activityID, date, time)
+    {
+        return timelogService.create(activityID,date,time)
+            .then(vm.TimelogController.refreshTimelog)
+            .then;
+    }
+
     function onUserDidReset() {
         vm.adminID = '';
         vm.title = '';
@@ -38,4 +46,6 @@ function ActivityFormController(activityService) {
     function showError(response) {
         alert(response.data.errors.join("\n"));
     }
+
+
 }
