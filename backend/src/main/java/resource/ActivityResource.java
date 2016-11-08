@@ -48,7 +48,7 @@ public class ActivityResource {
 
     @DELETE
     @Path("/{activityID}")
-    public void deleteNote(@PathParam("activityID") Integer activityID) {
+    public void deleteActivity(@PathParam("activityID") Integer activityID) {
         this.activityProcess.delete(activityID);
     }
 }

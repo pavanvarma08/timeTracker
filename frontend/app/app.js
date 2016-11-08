@@ -1,16 +1,6 @@
 angular.module('app', ['ngRoute'])
     .factory('activityService', activityService)
-    .factory('loginService', loginService)
-    .component('login', {
-        templateUrl: 'app/login/login.tpl',
-        controller: LoginController,
-        controllerAs: 'vm',
-
-        require: {
-            username: 'username',
-            password: 'password'
-        }
-    })
+    .factory('userService', userService)
     .component('activityForm', {
         templateUrl: 'app/activity-form/activity-form.tpl',
         controller: ActivityFormController,
@@ -60,15 +50,43 @@ angular.module('app', ['ngRoute'])
             data: '<'
         }
     })
+    .component('userForm', {
+        templateUrl: 'app/user-form/user-form.tpl',
+        controller: UserFormController,
+        controllerAs: 'vm',
 
-<<<<<<< HEAD
+        require: {
+            usersController: '^users'
+        },
 
-=======
->>>>>>> 088c76e7bf17af95ed4cc2b2f615af583b6915f9
+        bindings: {
+            data: '<',
+            onSubmit: '<',
+            onReset: '<'
+        }
+    })
+
+    .component('user', {
+        templateUrl: 'app/user/user.tpl',
+        controller: UserController,
+        controllerAs: 'vm',
+
+        require: {
+            usersController: '^users'
+        },
+
+        bindings: {
+            data: '<'
+        }
+    })
+
+    .component('users',{
+        templateUrl: 'app/users/users.tpl',
+        controller: UsersController,
+        controllerAs: 'vm',
+    })
+
     .component('navigation', { templateUrl: 'app/navigation/navigation.tpl' })
     .component('info', { templateUrl: 'app/info/info.tpl' })
-
-
-
 
     .config(appConfig);

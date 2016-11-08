@@ -26,18 +26,18 @@ public class UserResource {
     public List<User> userList() {return this.userProcess.list();}
 
     @GET
-    @Path("/{userID}")
-    public User getUser(@PathParam("userID") int userID) { return this.userProcess.find(userID);}
+    @Path("/{userId}")
+    public User getUser(@PathParam("userId") Integer userId) { return this.userProcess.find(userId);}
 
     @POST
     public User createUser(@NotNull User user) { return this.userProcess.create(user);}
 
     @PUT
-    @Path("/{userID}")
-    public User updatedUser(@PathParam("userID") int userID, User user) { return this.userProcess.update(userID, user);}
+    @Path("/{userId}")
+    public User updatedUser(@PathParam("userId") Integer userId,  User user) { return this.userProcess.update(userId, user);}
 
     @DELETE
-    @Path("/{userID}")
-    public void deleteUser(@PathParam("userID") int userID){ this.userProcess.delete(userID);}
+    @Path("/{userId}")
+    public void deleteUser(@PathParam("userId") Integer userId){ this.userProcess.delete(userId);}
 
 }
