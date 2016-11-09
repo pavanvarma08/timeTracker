@@ -1,5 +1,6 @@
 <form name="vm.activityForm" ng-submit="vm.sendActivity(vm.adminID, vm.title, vm.description)" class="panel panel-default">
     <div class="panel-body">
+
         <div class="form-group">
 
             <label class="col-md-4 control-label" for="adminID">Activity admin</label>

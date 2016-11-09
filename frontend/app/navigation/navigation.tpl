@@ -5,7 +5,7 @@
     <div class="btn-group pull-right">
         <a ng-href="#/" class="btn btn-default">Home Page</a>
         <a ng-href="#/users" class="btn btn-default">User Page</a>
-        <a ng-href="#/timelog" class="btn btn-default">Timelog</a>
+        <a ng-href="#/timelogs" class="btn btn-default">Timelog</a>
     </div>
 
     <div class="clearfix"></div>

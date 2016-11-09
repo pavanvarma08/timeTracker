@@ -15,8 +15,9 @@
 
             <div class="clearfix"></div>
         </div>
-        <div class="panel-body">{{vm.data.description}}</div>
+        <div class="panel-body">{{vm.data.description}}
 
+        </div>
             </div>
 
             <activity-form ng-switch-when="true" data="vm.data" on-submit="vm.submitEditedActivity" on-reset="vm.resetEditedActivity"></activity-form>
