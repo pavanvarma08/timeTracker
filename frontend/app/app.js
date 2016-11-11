@@ -37,11 +37,6 @@ angular.module('app', ['ngRoute'])
         controller: ActivitiesController,
         controllerAs: 'vm',
     })
-    .component('act',{
-        templateUrl: 'app/activities/act.tpl',
-        controller: ActivitiesController,
-        controllerAs: 'vm',
-    })
 
   // USER COMPONENTS
     .component('userForm', {

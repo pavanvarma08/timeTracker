@@ -13,7 +13,7 @@
     </div>
 
 
-    <div class="form-group">
+    <!--div class="form-group">
         <label for="repeatSelect"> Activities </label>
         <select name="repeatSelect" id="repeatSelect" ng-model="data">
 
@@ -21,9 +21,9 @@
 
         </select>
 
-    </div>
+    </div-->
 
-    <div class="row">
+    <!--div class="row">
         <timelog class="col-xs-6" ng-repeat="activity in vm.timelogs" data="timelog"></timelog>
-    </div>
-</div>
+    </div-->
+</div>cd 

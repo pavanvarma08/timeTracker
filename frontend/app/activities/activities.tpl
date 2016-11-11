@@ -11,8 +11,6 @@
             </div>
         </div>
     </div>
-<act></act>
-
     <div class="form-group">
         <label for="repeatSelect"> Activities </label>
         <select name="repeatSelect" id="repeatSelect" ng-model="data">

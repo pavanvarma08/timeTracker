@@ -5,7 +5,8 @@ function activityService($http, $interpolate) {
         list: list,
         create: create,
         destroy: destroy,
-        update: update
+        update: update,
+        fetch: fetch
     };
 
     function list() {
@@ -20,6 +21,11 @@ function activityService($http, $interpolate) {
         };
 
         return $http.post(activity(), data);
+    }
+
+    function fetch(title)
+    {
+        return $http.get(activity({title: title}));
     }
 
     function destroy(activityID) {

@@ -1,4 +1,6 @@
-<div class="container">
+
+// Changes to be done
+<!--div class="container">
     <navigation class="row"> </navigation>
 
     <div class="form-group">
@@ -8,7 +10,7 @@
         <option ng-repeat="activity in vm.activities" value="{{activity.title}}">{{activity.title}}</option>
     </select>
 </div>
-<div class="form-group">
+<div class="form-group"-->
 
 
 
@@ -28,6 +30,6 @@
 
     </div-->
 
-</div>
-
+<!--/div>
+</div-->
 

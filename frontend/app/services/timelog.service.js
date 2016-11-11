@@ -17,7 +17,6 @@ function timelogService($http, $interpolate) {
             date: date,
             time: time,
             activityID: activityID
-
         };
 
         return $http.post(timelog(), data);

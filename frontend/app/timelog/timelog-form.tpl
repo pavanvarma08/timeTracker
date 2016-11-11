@@ -17,20 +17,29 @@
         </div>
         <div class="form-group">
 
-            <label class="col-md-4 control-label" for="time">time</label>
+            <label class="col-md-4 control-label" for="time">time </label>
             <input id="time" name="time" class="form-control" ng-model="vm.time" type="number" placeholder="hours worked" autocomplete="off" required = " ">
         </div>
+        <H1>{{vm.activityID}}</H1>
         <div class="form-group">
-
-            <select name="activityID" id="activityID" ng-model="data">
-
-                <option ng-repeat="activity in vm.activities" value="{{activity.activityID}}">{{activity.activityID}}</option>
+            <label class="col-md-4 control-label" for="activityID"> Activities Title </label>
+            <select name="activityID" id="activityID" ng-model="vm.activityID">
+                <!--option>612</option>
+                <option>641</option-->
+                <option ng-repeat="activity in vm.activities" value="{{activity.activityID}}">{{activity.title}}</option>
             </select>
         </div>
+
         <!--div class="form-group">
             <label class="col-md-4 control-label" for="activityID">Activity ID</label>
             <input id="activityID" name="activityID" class="form-control" ng-model="vm.activityID" type="number" placeholder="activityID" required="">
         </div-->
+        <!--div class="form-group">
+
+            <label class="col-md-4 control-label" for="title">Title</label>
+            <input id="title" name="title" class="form-control" ng-model="vm.title" type="text" placeholder="Title of the activity" autocomplete="off" required = " ">
+        </div-->
+
     </div>
 
     <div class="panel-footer text-right">
