@@ -1,4 +1,4 @@
-angular.module('app', ['ngRoute'])
+angular.module('app', ['ngRoute'], ['ui.bootstrap'])
     .factory('activityService', activityService)
     .factory('userService', userService)
     .factory('timelogService', timelogService)
