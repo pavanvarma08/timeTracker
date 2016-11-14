@@ -26,4 +26,4 @@
     <!--div class="row">
         <timelog class="col-xs-6" ng-repeat="activity in vm.timelogs" data="timelog"></timelog>
     </div-->
-</div>cd 
+</div>cd

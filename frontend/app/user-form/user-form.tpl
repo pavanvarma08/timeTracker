@@ -28,9 +28,21 @@
 
         <div class="form-group">
             <label class="col-md-4 control-label" for="adminCheck">Admin Check</label>
-            <input id="adminCheck" name="adminCheck" class="form-control" ng-model="vm.adminCheck" type="number" placeholder="Admin Check" required="">
-        </div>
+            <label class="switch">
+                <input id="adminCheck" type="checkbox" name="adminCheck" class="form-control"
+                       ng-model="vm.adminCheck"
+                       ng-true-value="1"
+                       ng-false-value="0"
+                       ng-checked="checkbox == 1" />
+                <!--input  name="adminCheck" class="form-control" ng-model="vm.adminCheck" type='hidden' value='0' placeholder="Admin Check" required="">
+                <input id="adminCheck" name="adminCheck" class="form-control" ng-model="vm.adminCheck" type="checkbox" value='1' placeholder="Admin Check" required=""-->
+                <div class="slider round"></div>
+            </label>
 
+            <!--input id="adminCheck" name="adminCheck" class="form-control" ng-model="vm.adminCheck" type="checkbox" placeholder="Admin Check" required=""-->
+        </div>
+        {{vm.password}}
+        {{vm.adminCheck}}
     </div>
 
     <div class="panel-footer text-right">
