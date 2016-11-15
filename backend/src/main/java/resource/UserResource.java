@@ -13,7 +13,7 @@ import java.util.List;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
-@Path("/user")
+@Path("user")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class UserResource {
@@ -25,19 +25,23 @@ public class UserResource {
     @GET
     public List<User> userList() {return this.userProcess.list();}
 
+    @POST
+    public User verify(User user) { return  this.userProcess.verify(user);}
+
     @GET
-    @Path("/{userId}")
-    public User getUser(@PathParam("userId") Integer userId) { return this.userProcess.find(userId);}
+    @Path("/{userID}")
+    public User getUser(@PathParam("userID") int userID) { return this.userProcess.find(userID);}
 
     @POST
+    @Path("/{userID}")
     public User createUser(@NotNull User user) { return this.userProcess.create(user);}
 
     @PUT
-    @Path("/{userId}")
-    public User updatedUser(@PathParam("userId") Integer userId,  User user) { return this.userProcess.update(userId, user);}
+    @Path("/{userID}")
+    public User updatedUser(@PathParam("userID") int userID, @Valid User user) { return this.userProcess.update(userID, user);}
 
     @DELETE
-    @Path("/{userId}")
-    public void deleteUser(@PathParam("userId") Integer userId){ this.userProcess.delete(userId);}
+    @Path("/{userID}")
+    public void deleteUser(@PathParam("userID") int userID){ this.userProcess.delete(userID);}
 
 }

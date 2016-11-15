@@ -5,6 +5,7 @@ import db.UserDAO;
 import db.entity.User;
 
 import javax.ws.rs.NotFoundException;
+import javax.ws.rs.NotAuthorizedException;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,13 +20,21 @@ public class UserProcessDbImpl implements UserProcess{
     public List<User> list() { return this.userDAO.list();}
 
     @Override
+    public User verify(User user) throws NotAuthorizedException{
+        return Optional
+                .ofNullable(this.userDAO.verifyBy(user))
+
+                .orElseThrow(() -> new NotAuthorizedException("Invalid Credentials"));
+    }
+
+    @Override
     public User create(User user) {return this.userDAO.findBy(this.userDAO.create(user)); }
 
     @Override
-    public User update(Integer userId, User updatedUser) throws NotFoundException {
-        User user = this.find(userId);
+    public User update(int userID, User updatedUser) throws NotFoundException {
+        User user = this.find(userID);
 
-        user.setUsername( updatedUser.getUsername());
+        user.setUsername(updatedUser.getUsername());
         user.setPassword(updatedUser.getPassword());
         user.setFirstname(updatedUser.getFirstname());
         user.setLastname(updatedUser.getLastname());
@@ -37,13 +46,13 @@ public class UserProcessDbImpl implements UserProcess{
     }
 
     @Override
-    public User find(Integer userId) throws NotFoundException {
+    public User find(int userID) throws NotFoundException {
 
         return Optional
-                .ofNullable(this.userDAO.findBy(userId))
+                .ofNullable(this.userDAO.findBy(userID))
                 .orElseThrow(() -> new NotFoundException(" user does not exist"));
     }
 
     @Override
-    public void delete(Integer userId) { this.userDAO.deleteBy(userId);}
+    public void delete(int userID) { this.userDAO.deleteBy(userID);}
 }

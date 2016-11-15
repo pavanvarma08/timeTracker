@@ -11,7 +11,7 @@
                 <a class="navbar-brand" href="#/info">Time Tracker</a>
             </div>
             <ul class="topnav pull-right" id="myTopnav">
-                <li><a ng-href="#/" >Home Page</a></li>
+                <li><a ng-href="#/activity" >Activity</a></li>
                 <li><a ng-href="#/users">User Page</a></li>
                 <li><a ng-href="#/timelogs">Timelog</a></li>
             </ul>
