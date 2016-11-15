@@ -14,7 +14,11 @@
                 <li><a ng-href="#/" >Home Page</a></li>
                 <li><a ng-href="#/users">User Page</a></li>
                 <li><a ng-href="#/timelogs">Timelog</a></li>
+                <!--li class="icon">
+                    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+                </li-->
             </ul>
+
             </div>
         </div>
 
@@ -23,6 +27,8 @@
             <a ng-href="#/users" class="btn btn-default">User Page</a>
             <a ng-href="#/timelogs" class="btn btn-default">Timelog</a>
         </div-->
+
+
     </div>
 
     <!--div class="page-header">

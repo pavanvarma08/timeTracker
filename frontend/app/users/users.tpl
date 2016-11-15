@@ -13,7 +13,26 @@
         </div>
     </div>
 
-    <div class="row">
+    <!--div class="row">
         <user class="col-xs-6" ng-repeat="user in vm.users" data="user"></user>
-    </div>
+    </div-->
+
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th> Username</th>
+                <th> Firstname</th>
+                <th> Lastname </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="user in vm.users" data="user" >
+                <td> {{user.username}} </td>
+                <td> {{user.firstname}}</td>
+                <td> {{user.lastname}}</td>
+            </tr>
+            </tbody>
+        </table>
+
 </div>

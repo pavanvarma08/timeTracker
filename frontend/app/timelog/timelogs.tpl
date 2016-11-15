@@ -2,7 +2,7 @@
     <navigation class="row"></navigation>
 
     <div class="row">
-        <timelog-form class="col-xs-12"></timelog-form>
+        <timelog-form class="row"></timelog-form>
 
         <div class="col-xs-12 text-center" ng-if="!vm.hasTimelog()">
             <div class="alert alert-info" role="alert">

@@ -18,7 +18,25 @@
         </select>
     </div>
 
-    <div class="row">
+    <!--div class="row">
         <activity class="col-xs-6" ng-repeat="activity in vm.activities" data="activity"></activity>
-    </div>
+    </div-->
+
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th> Username</th>
+            <th> Firstname</th>
+            <th> Lastname </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="user in vm.activities" data="activity" >
+            <td> {{activity.title}} </td>
+            <td> {{activity.description}}</td>
+            <td> {{activity.activityID}}</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
