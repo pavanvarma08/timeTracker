@@ -14,15 +14,12 @@
                 <li><a ng-href="#/activity" >Activity</a></li>
                 <li><a ng-href="#/users">User Page</a></li>
                 <li><a ng-href="#/timelogs">Timelog</a></li>
+                <li><a ng-href="#/">Logout</a></li>
             </ul>
             </div>
         </div>
 
-        <!--div class="btn-group pull-right">
-            <a ng-href="#/" class="btn btn-default">Home Page</a>
-            <a ng-href="#/users" class="btn btn-default">User Page</a>
-            <a ng-href="#/timelogs" class="btn btn-default">Timelog</a>
-        </div-->
+
     </div>
 
     <!--div class="page-header">
