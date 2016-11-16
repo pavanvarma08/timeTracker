@@ -1,7 +1,8 @@
 <div class="container">
-    <navigation class="row"></navigation>
+    <adminnavigation class="row"></adminnavigation>
 
     <div class="row">
+        Welcome {{vm.users.firstname+ " "+ vm.users.lastname}}
         <activity-form class="col-xs-12"></activity-form>
 
         <div class="col-xs-12 text-center" ng-if="!vm.hasActivities()">

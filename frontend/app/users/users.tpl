@@ -1,6 +1,6 @@
 <!--script src="../user-form/user-form.controller.js"></script-->
 <div class="container">
-    <navigation class="row"></navigation>
+    <adminnavigation class="row"></adminnavigation>
 
     <div class="row">
         <user-form class="col-xs-12"></user-form>
