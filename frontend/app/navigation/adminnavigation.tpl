@@ -31,7 +31,7 @@
 
                         </ul>
                     </li>
-                    <li class="well well-sm">Welcome Admin</li>
+                    <li>Welcome Admin</li>
                     <li><a ng-href="#/">Logout</a></li>
                 </ul>
 
