@@ -13,6 +13,8 @@
             <div class="collapse navbar-collapse navHeaderCollapse">
 
                 <ul class="nav navbar-nav navbar-right"  >
+                    <li class="active"><a href="#">Overview</a> </li>
+
                     <li class="dropdown">
                         <a ng-href="#/activity" class="dropdown-toggle" data-toggle="dropdown">Activities<b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -21,7 +23,6 @@
 
                         </ul>
                     </li>
-                    <li><a ng-href="#/users">User Page</a></li>
                     <li class="dropdown">
                         <a ng-href="#/users" class="dropdown-toggle" data-toggle="dropdown">Users<b class="caret"></b></a>
                         <ul class="dropdown-menu">
