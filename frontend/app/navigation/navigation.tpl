@@ -24,6 +24,8 @@
 
                         </ul>
                     </li>
+                    <li class="well well-sm">Welcome User</li>
+
                     <li><a ng-href="#/">Logout</a></li>
                 </ul>
 
