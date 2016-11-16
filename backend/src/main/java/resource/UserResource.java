@@ -26,6 +26,7 @@ public class UserResource {
     public List<User> userList() {return this.userProcess.list();}
 
     @POST
+    @Path("/{userID}")
     public User verify(User user) { return  this.userProcess.verify(user);}
 
     @GET
@@ -33,7 +34,7 @@ public class UserResource {
     public User getUser(@PathParam("userID") int userID) { return this.userProcess.find(userID);}
 
     @POST
-    @Path("/{userID}")
+
     public User createUser(@NotNull User user) { return this.userProcess.create(user);}
 
     @PUT

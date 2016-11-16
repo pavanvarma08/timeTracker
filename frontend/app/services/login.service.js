@@ -3,7 +3,7 @@
  */
 
 function loginService($http, $interpolate, $rootScope) {
-    var login = $interpolate('/api/user/');
+    var login = $interpolate('/api/user/{{userID}}');
 
     return {
 
