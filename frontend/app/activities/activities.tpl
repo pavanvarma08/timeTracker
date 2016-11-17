@@ -1,5 +1,5 @@
 <div class="container">
-    <adminnavigation class="row"></adminnavigation>
+    <navigation class="row"></navigation>
 
     <div class="text-center">
         <h1><p class="bg-primary">ACTIVITY</p></h1>

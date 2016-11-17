@@ -1,74 +1,46 @@
 
-<!--div class="col-md-5">
-<div style="width: 400px; margin: 200px auto 0 auto ">
-<form name="vm.loginForm" ng-submit="vm.onSubmit(vm.username, vm.password)" >
-    <div class="panel-body">
-        <div class="form-group">
+<nav class="navbar navbar-default navbar-fixed-top " style="background: black" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbarCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
 
-            <label class="col-md-4 control-label" for="username" style="color: #b9def0">username</label>
-            <input type="text" name="username" id ="username" class="form-control" ng-model="vm.username" placeholder=" user/ Admin" autocomplete="off" required />
-        </div>
-        <div class="form-group">
-
-            <label class="col-md-4 control-label" for="password"  style="color: #b9def0">password</label>
-            <input id="password" name="password" class="form-control" ng-model="vm.password" type="password" placeholder="password " autocomplete="off" required/>
+            <a class="navbar-brand" ng-href="#">TimeTracker</a>
         </div>
 
+        <div class="collapse navbar-collapse navbarCollapse">
 
+            <center>
+                    <div class="navbar-collapse collapse" id="navbar-main">
 
-        <button type="submit" class="btn btn-xs btn-success pull-right" style="color: black">Submit</button>
-
-
+                        <form class="navbar-form navbar-right" role="search" ng-submit="vm.onSubmit(vm.username, vm.password)">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="username" ng-model="vm.username" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password" ng-model="vm.password" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-xs btn-success">Sign In</button>
+                        </form>
+                    </div>
+                </center>
+        </div>
     </div>
-</form>
-</div>
+</nav>
 
-</div>
-
-
-
-
-<style>
-
-
-
-
-/* CSS used here will be applied after bootstrap.css */
-
-body {
-background:
-
-        url('/app/login-form/time1.jpg') no-repeat center center fixed;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-    opacity: 0.9;}
-
-    img {
-        opacity: 0.6;
-    }
-
-
-.panel-default {
-opacity: 0.9;
-margin-top:30px;
-}
-.form-group.last {
-margin-bottom:0px;
-}
-
-</style-->
-
-<navigation></navigation>
 <div class="bgimg-1">
 
-    <!--div class="caption">
+    <div class="caption">
 
 
-    </div-->
+        <span class="border">ACTIVITY TIME TRACKER</span>
 
-    <div class="container" style="align-content: center" >
+    </div>
+
+    <!--div class="container" style="align-content: center" >
         <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
             <div class="panel panel-info" >
                 <div class="panel-heading">

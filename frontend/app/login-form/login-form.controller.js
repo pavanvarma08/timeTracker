@@ -24,7 +24,7 @@ function LoginFormController(loginService, $location) {
                 loginService.SetCredentials(username, password);
                 console.log(response.data.adminCheck)
                 if (response.data.adminCheck === 1) { $location.path('/activity'); }
-                else { $location.path('/info') }
+                else { $location.path('/timelogs') }
             }
             else
             {
