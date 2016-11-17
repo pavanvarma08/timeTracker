@@ -1,6 +1,9 @@
 <div class="container">
     <navigation class="row"></navigation>
 
+    <div class="text-center">
+        <h1><p class="bg-primary">ACTIVITY</p></h1>
+    </div>
     <div class="row">
         <activity-form class="col-xs-12"></activity-form>
 
@@ -11,31 +14,35 @@
             </div>
         </div>
     </div>
-    <div class="form-group">
+
+
+    <!--div class="form-group">
         <label for="repeatSelect"> Activities </label>
         <select name="repeatSelect" id="repeatSelect" ng-model="data">
             <option ng-repeat="activity in vm.activities" value="{{activity.title}}">{{activity.title}}</option>
         </select>
-    </div>
+    </div-->
 
     <!--div class="row">
         <activity class="col-xs-6" ng-repeat="activity in vm.activities" data="activity"></activity>
     </div-->
+    <div class="form-group pull-right col-xs-4"><input type="text" id="myInput" class="search form-control" ng-change="vm.myFunction()" ng-model="value" placeholder="Search for names.."/>
+    </div>
+    <div class="col-xs-6 text-right" >
+        <h1>Activities List</h1>
+    </div>
 
-
-    <table class="table table-striped">
+    <table id="myTable" class="table table-striped">
         <thead>
         <tr>
-            <th> Username</th>
-            <th> Firstname</th>
-            <th> Lastname </th>
+            <th> Title</th>
+            <th> Description</th>
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="user in vm.activities" data="activity" >
+        <tr ng-repeat="activity in vm.activities" data="activity" >
             <td> {{activity.title}} </td>
             <td> {{activity.description}}</td>
-            <td> {{activity.activityID}}</td>
         </tr>
         </tbody>
     </table>

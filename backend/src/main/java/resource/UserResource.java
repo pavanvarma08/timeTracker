@@ -13,7 +13,7 @@ import java.util.List;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
-@Path("/user")
+@Path("user")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class UserResource {
@@ -25,6 +25,10 @@ public class UserResource {
     @GET
     public List<User> userList() {return this.userProcess.list();}
 
+    @POST
+    @Path("/{userId}")
+    public User verify(User user) { return  this.userProcess.verify(user);}
+
     @GET
     @Path("/{userId}")
     public User getUser(@PathParam("userId") Integer userId) { return this.userProcess.find(userId);}
@@ -34,7 +38,7 @@ public class UserResource {
 
     @PUT
     @Path("/{userId}")
-    public User updatedUser(@PathParam("userId") Integer userId,  User user) { return this.userProcess.update(userId, user);}
+    public User updatedUser(@PathParam("userId") Integer userId, @Valid User user) { return this.userProcess.update(userId, user);}
 
     @DELETE
     @Path("/{userId}")

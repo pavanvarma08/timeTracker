@@ -1,8 +1,6 @@
-<div class="row text-center">
-    <h1><p class="bg-primary"> ACTIVITY PAGE  </p></h1>
-</div>
-<form class="panel panel-default">
-<div name="vm.activityForm" ng-submit="vm.sendActivity(vm.adminID, vm.title, vm.description)" class="form-horizontal">
+
+<div class="panel panel-default">
+<form name="vm.activityForm" ng-submit="vm.sendActivity(vm.adminID, vm.title, vm.description)" class="form-horizontal">
     <div class="panel-body ">
         <div class="form-group">
 
@@ -33,15 +31,8 @@
         <button type="reset" class="btn btn-xs btn-default" ng-click="vm.onReset()">Reset</button>
 
 </div>
-    </div>
     </form>
-
     </div>
-<div class="clearfix"></div>
-<p class="bg-primary"> Hello</p>
-<p class="bg-success"> success</p>
-<p class="bg-info">info</p>
-<p class="bg-warning">warning</p>
-<p class="bg-danger">Danger</p>
+
 
 
