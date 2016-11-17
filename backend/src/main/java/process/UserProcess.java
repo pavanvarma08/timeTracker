@@ -8,9 +8,12 @@ import java.util.List;
 
 public interface UserProcess {
     List<User> list();
-    User verify(User user);
+  User verify( User user);
+  //  User verify( String username, String password, User user);
     User create(User user);
-    User update(int userID, User user) throws NotFoundException;
-    User find(int userID) throws NotFoundException;
-    void delete(int userID);
+    User update(Integer userId, User user) throws NotFoundException;
+    User find(Integer userId) throws NotFoundException;
+    void delete(Integer userId);
+
+
 }

@@ -1,5 +1,5 @@
 
-<div class="page-header">
+<!--div class="page-header">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -50,3 +50,30 @@
         <!--/div>
     </div>
 </div-->
+<nav class="navbar navbar-default navbar-fixed-top " style="background: black" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbarCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" ng-href="#/info">Softhouse</a>
+        </div>
+
+        <div class="collapse navbar-collapse navbarCollapse">
+            <ul class="nav navbar-nav navbar-right">
+
+
+                <li ><a ng-href="#/activity" >Activity</a></li>
+                <li><a ng-href="#/users">User Page</a></li>
+                <li><a ng-href="#/timelogs">Timelog</a></li>
+                <li><a ng-href="#/">Logout</a></li>
+
+
+
+            </ul>
+        </div>
+    </div>
+</nav>

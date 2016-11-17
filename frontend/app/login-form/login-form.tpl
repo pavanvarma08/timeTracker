@@ -1,5 +1,5 @@
-<h2 align="center" style="color-profile: white; background: navajowhite" >Activity Time Tracker Login</h2>
-<div class="col-md-5">
+
+<!--div class="col-md-5">
 <div style="width: 400px; margin: 200px auto 0 auto ">
 <form name="vm.loginForm" ng-submit="vm.onSubmit(vm.username, vm.password)" >
     <div class="panel-body">
@@ -38,7 +38,7 @@
 body {
 background:
 
-        url('/app/login-form/time2.jpg') no-repeat center center fixed;
+        url('/app/login-form/time1.jpg') no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
@@ -46,7 +46,7 @@ background-size: cover;
     opacity: 0.9;}
 
     img {
-        opacity: 0.1;
+        opacity: 0.6;
     }
 
 
@@ -58,4 +58,217 @@ margin-top:30px;
 margin-bottom:0px;
 }
 
+</style-->
+
+<navigation></navigation>
+<div class="bgimg-1">
+
+    <!--div class="caption">
+
+
+    </div-->
+
+    <div class="container" style="align-content: center" >
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="panel panel-info" >
+                <div class="panel-heading">
+                    <div class="panel-title">Sign In</div>
+                    <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
+                </div>
+
+                <div style="padding-top:30px;  background-color: rgba(245, 245, 245, 0);" class="panel-body" >
+
+                    <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                    <form name="vm.loginForm" ng-submit="vm.onSubmit(vm.username, vm.password)" >
+                        <form id="loginform" class="form-horizontal" role="form">
+
+                            <div style="margin-bottom: 25px" class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" name="username" id ="username" class="form-control" ng-model="vm.username" placeholder=" user/ Admin" autocomplete="off" required />
+                            </div>
+
+                            <div style="margin-bottom: 25px" class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input id="password" name="password" class="form-control" ng-model="vm.password" type="password" placeholder="password " autocomplete="off" required/>
+                            </div>
+
+                        <div class="input-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                                </label>
+                            </div>
+                        </div>
+
+
+                        <div style="margin-top:10px" class="form-group">
+                            <!-- Button -->
+
+                            <div class="col-sm-12 controls">
+                                <button type="submit" class="btn btn-xs btn-success pull-right" style="color: black">Submit</button>
+
+
+                            </div>
+                        </div>
+
+
+                        </form>
+
+
+                    </form>
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+            </form>
+        </div>
+        </div-->
+
+
+
+    </div>
+</div>
+</div>
+
+<!--div class="col-md-5">
+    <div style="width: 400px; margin: 200px auto 0 auto ">
+        <form name="vm.loginForm" ng-submit="vm.onSubmit(vm.username, vm.password)" >
+            <div class="panel-body">
+                <div class="form-group">
+
+                    <label class="col-md-4 control-label" for="username" style="color: #b9def0">username</label>
+                    <input type="text" name="username" id ="username" class="form-control" ng-model="vm.username" placeholder=" user/ Admin" autocomplete="off" required />
+                </div>
+                <div class="form-group">
+
+                    <label class="col-md-4 control-label" for="password"  style="color: #b9def0">password</label>
+                    <input id="password" name="password" class="form-control" ng-model="vm.password" type="password" placeholder="password " autocomplete="off" required/>
+                </div>
+
+
+
+                <button type="submit" class="btn btn-xs btn-success pull-right" style="color: black">Submit</button>
+
+
+            </div>
+        </form>
+    </div-->
+
+
+
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <h3 style="text-align:center;">Activity Tracking System</h3>
+    <p> A Web-based application which allows the manager to create users, and activities for a project and later track the time for each user assigned to an activity.</p>
+</div>
+
+<div class="bgimg-2">
+    <div class="caption">
+        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"><h1>ADMIN</h1></span>
+    </div>
+</div>
+
+<div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+        <p>Admin can create new users and can track the activities of all the users</p>
+    </div>
+</div>
+
+<div class="bgimg-3">
+    <div class="caption">
+        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"><h1>USER</h1></span>
+    </div>
+</div>
+
+<div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+        <p>User selects the activity on which he is working and later keep track of his own activities</p>
+    </div>
+</div>
+
+<div class="bgimg-1">
+    <div class="caption">
+        <span class="border">TIME IS PRECIOUS</span>
+    </div>
+</div>
+<span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span>
+
+
+
+<style>
+
+
+
+    body, html {
+        height: 100%;
+        margin: 0;
+        font: 400 15px/1.8 "Lato", sans-serif;
+        color: #777;
+        background:
+
+
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        position: relative;
+        opacity: 0.65;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+    .bgimg-1 {
+        background-image: url("../../time2.jpg");
+        min-height: 100%;
+    }
+
+    .bgimg-2 {
+        background-image: url("../../img_parallax2.jpg");
+        min-height: 400px;
+    }
+
+    .bgimg-3 {
+        background-image: url("../../img_parallax3.jpg");
+        min-height: 400px;
+    }
+
+    .caption {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        color: #000;
+    }
+
+    .caption span.border {
+        background-color: #111;
+        color: #fff;
+        padding: 18px;
+        font-size: 25px;
+        letter-spacing: 10px;
+    }
+
+    h3 {
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font: 20px "Lato", sans-serif;
+        color: #111;
+    }
+
 </style>
+
+
+

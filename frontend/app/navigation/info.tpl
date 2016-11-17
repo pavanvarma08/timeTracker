@@ -1,19 +1,12 @@
-
-<navigation></navigation>
-
 <div class="bgimg-1">
 
-    <div class="caption">
-        <span class="border">ACTIVITY TIME TRACKER!</span>
 
-    </div>
-</div>
 
 <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
     <h3 style="text-align:center;">Activity Tracking System</h3>
     <p> A Web-based application which allows the manager to create users, and activities for a project and later track the time for each user assigned to an activity.</p>
 </div>
-
+</div>
 <div class="bgimg-2">
     <div class="caption">
         <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"><h1>ADMIN</h1></span>
@@ -48,12 +41,23 @@
 
 
 <style>
+
+
+
     body, html {
         height: 100%;
         margin: 0;
         font: 400 15px/1.8 "Lato", sans-serif;
         color: #777;
-    }
+        background:
+
+
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+       }
+
 
     .bgimg-1, .bgimg-2, .bgimg-3 {
         position: relative;

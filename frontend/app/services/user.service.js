@@ -2,7 +2,7 @@
  * Created by Mini on 16/11/07.
  */
 function userService($http, $interpolate) {
-    var user = $interpolate('/api/user/{{userId}}');
+    var user = $interpolate('/api/login/user/{{userId}}');
 
     return {
         list: list,

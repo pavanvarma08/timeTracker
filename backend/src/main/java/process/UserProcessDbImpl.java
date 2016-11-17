@@ -20,19 +20,25 @@ public class UserProcessDbImpl implements UserProcess{
     public List<User> list() { return this.userDAO.list();}
 
     @Override
-    public User verify(User user) throws NotAuthorizedException{
+    public User verify( User user) throws NotAuthorizedException{
         return Optional
                 .ofNullable(this.userDAO.verifyBy(user))
 
                 .orElseThrow(() -> new NotAuthorizedException("Invalid Credentials"));
     }
+    /*@Override
+    public User verify(String username, String password, User user) throws NotAuthorizedException{
+        return Optional
+                .ofNullable(this.userDAO.verifyBy(username, password))
 
+                .orElseThrow(() -> new NotAuthorizedException("Invalid Credentials"));
+    }*/
     @Override
     public User create(User user) {return this.userDAO.findBy(this.userDAO.create(user)); }
 
     @Override
-    public User update(int userID, User updatedUser) throws NotFoundException {
-        User user = this.find(userID);
+    public User update(Integer userId, User updatedUser) throws NotFoundException {
+        User user = this.find(userId);
 
         user.setUsername(updatedUser.getUsername());
         user.setPassword(updatedUser.getPassword());
@@ -46,13 +52,13 @@ public class UserProcessDbImpl implements UserProcess{
     }
 
     @Override
-    public User find(int userID) throws NotFoundException {
+    public User find(Integer userId) throws NotFoundException {
 
         return Optional
-                .ofNullable(this.userDAO.findBy(userID))
+                .ofNullable(this.userDAO.findBy(userId))
                 .orElseThrow(() -> new NotFoundException(" user does not exist"));
     }
 
     @Override
-    public void delete(int userID) { this.userDAO.deleteBy(userID);}
+    public void delete(Integer userId) { this.userDAO.deleteBy(userId);}
 }
