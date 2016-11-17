@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" ng-href="#/info">Timetracker</a>
+            <a class="navbar-brand">Timetracker</a>
         </div>
 
         <div class="collapse navbar-collapse navbarCollapse">
@@ -15,8 +15,7 @@
 
 
                 <li ><a ng-href="#/timelogs">Timelog</a></li>
-                <li><a ng-href="#/users"></a></li>
-                <li><a ng-href="">Overview</a></li>
+                <li><a>Overview</a></li>
                 <li><a ng-href="#/">Logout</a></li>
 
 
@@ -42,6 +41,37 @@
             </div>
         </div>
     </div>
+
+
+    <div class="form-group pull-right col-xs-4"><input type="text" id="myInput" class="search form-control" ng-change="vm.myFunction()" ng-model="value" placeholder="Search for names.."/>
+    </div>
+    <div class="col-xs-6 text-right" >
+        <h1>Timelogs</h1>
+    </div>
+
+    <table id="myTable" class="table table-striped table-bordered">
+        <thead class="thead-inverse">
+        <tr>
+            <th> ActivityID </th>
+            <th> Date</th>
+            <th> Time</th>
+
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr ng-repeat="timelogs in vm.timelogs" data="timelogs" >
+
+            <td> {{timelogs.activityID}}</td>
+            <td> {{timelogs.date}} </td>
+            <td> {{timelogs.time}}</td>
+
+        </tr>
+
+
+
+        </tbody>
+    </table>
 
 
     <!--div class="form-group">

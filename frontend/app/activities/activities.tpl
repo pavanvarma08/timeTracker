@@ -47,4 +47,8 @@
         </tr>
         </tbody>
     </table>
+
+    <div class="row">
+        <activity class="col-xs-6" ng-repeat="activity in vm.activities" data="activity"></activity>
+    </div>
 </div>

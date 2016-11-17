@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" ng-href="#/info">TimeTracker</a>
+            <a class="navbar-brand">TimeTracker</a>
         </div>
 
         <div class="collapse navbar-collapse navbarCollapse">
@@ -16,7 +16,7 @@
 
                 <li ><a ng-href="#/activity" >Activity</a></li>
                 <li><a ng-href="#/users">User Page</a></li>
-                <li><a ng-href="#">Overview</a></li>
+                <li><a>Overview</a></li>
                 <li><a ng-href="#/">Logout</a></li>
 
 

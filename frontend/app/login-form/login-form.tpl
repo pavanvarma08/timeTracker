@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" ng-href="#">TimeTracker</a>
+            <a class="navbar-brand">TimeTracker</a>
         </div>
 
         <div class="collapse navbar-collapse navbarCollapse">

@@ -58,7 +58,9 @@
 
     </tbody>
 </table>
-
+    <div class="row">
+        <user class="col-xs-6" ng-repeat="user in vm.users" data="user"></user>
+    </div>
 
 </div>
 
