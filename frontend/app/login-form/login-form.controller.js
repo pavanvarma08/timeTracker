@@ -11,8 +11,6 @@ function LoginFormController(loginService, $location) {
     vm.showSuccess = showSuccess;
 
     function $onInit() {
-
-
         loginService.ClearCredentials();
 
     }

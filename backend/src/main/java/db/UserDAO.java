@@ -24,9 +24,6 @@ public interface UserDAO {
     User verifyBy(@BindBean User user);
 
 
-    /*@SqlQuery("SELECT * FROM `User` WHERE username= :username AND password = :password ")
-    User verifyBy(@Bind("username,password") String username, String password);*/
-
     @SqlQuery("SELECT * FROM `User` WHERE userId = :userId")
     User findBy(@Bind("userId") Integer userId);
 

@@ -10,12 +10,46 @@
                 </button>
                 <a class="navbar-brand" href="#/info">Time Tracker</a>
             </div>
+
             <ul class="topnav pull-right" id="myTopnav">
                 <li><a ng-href="#/activity" >Activity</a></li>
                 <li><a ng-href="#/users">User Page</a></li>
                 <li><a ng-href="#/timelogs">Timelog</a></li>
-                <li><a ng-href="#/">Logout</a></li>
+                <!--li class="icon">
+                    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+                </li-->
             </ul>
+
+            </div>
+        </div>
+
+        <!--div class="btn-group pull-right">
+            <a ng-href="#/" class="btn btn-default">Home Page</a>
+            <a ng-href="#/users" class="btn btn-default">User Page</a>
+            <a ng-href="#/timelogs" class="btn btn-default">Timelog</a>
+        </div-->
+
+            <div class="collapse navbar-collapse navHeaderCollapse">
+
+                <ul class="nav navbar-nav navbar-right"  >
+                    <li class="active"><a href="#">Overview</a> </li>
+
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">My Activities<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">View New Activities</a> </li>
+                            <li><a href="#">View Ongoing Activities</a> </li>
+                            <li><a href="#">View Completed Activities</a> </li>
+
+                        </ul>
+                    </li>
+                    <li>Welcome User</li>
+
+                    <li><a ng-href="#/">Logout</a></li>
+                </ul>
+
+
+            </div>
             </div>
         </div>
 

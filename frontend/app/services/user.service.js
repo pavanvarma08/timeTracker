@@ -23,7 +23,6 @@ function userService($http, $interpolate) {
             lastname: lastname,
             adminCheck: adminCheck
         };
-
         return $http.post(user(), data);
     }
 

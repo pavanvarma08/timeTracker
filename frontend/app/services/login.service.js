@@ -3,7 +3,9 @@
  */
 
 function loginService($http, $interpolate, $rootScope) {
+
     var login = $interpolate('/api/login');
+
 
     return {
 
@@ -20,8 +22,6 @@ function loginService($http, $interpolate, $rootScope) {
             username: username,
             password: password
         };
-
-
         return $http.post(login(), data);
     }
 

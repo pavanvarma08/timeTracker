@@ -26,12 +26,7 @@ public class UserResource {
     @Path("/user")
     public List<User> userList() {return this.userProcess.list();}
 
-   //@POST
-  //  @Path("/user/{username}/{password}/")
-    //public User verify(@PathParam("username") String username, @PathParam("password") String password, @Valid User user) { return  this.userProcess.verify(username, password, user);}*/
-
    @POST
-
    public User verify( User user) { return this.userProcess.verify(user);}
 
     @GET
