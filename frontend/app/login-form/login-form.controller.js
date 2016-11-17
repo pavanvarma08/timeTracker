@@ -1,11 +1,11 @@
 /**
  * Created by putty on 11/15/16.
  */
-function LoginFormController(loginService, $location) {
+function LoginFormController(loginService, $location, $scope) {
     var vm = this;
 
     vm.$onInit = $onInit;
-
+    vm.background = background;
     vm.onSubmit = onUserSubmit;
     vm.onReset = onUserDidReset;
     vm.showError = showError;
@@ -13,6 +13,11 @@ function LoginFormController(loginService, $location) {
 
     function $onInit() {
         loginService.ClearCredentials();
+
+    }
+
+    function background() {
+        loginService.$scope.bgimg = "time2.jpg";
 
     }
 

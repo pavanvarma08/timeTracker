@@ -1,8 +1,12 @@
 <div class="container">
+
     <navigation class="row"></navigation>
 <div class="text-center">
     <h1><p class="bg-info">New Employee Details</p></h1>
 </div>
+    <!--adminnavigation class="row"></adminnavigation-->
+
+
     <div class="row">
         <user-form class="col-xs-12"></user-form>
 

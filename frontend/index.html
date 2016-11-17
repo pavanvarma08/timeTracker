@@ -5,7 +5,10 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/test.css">
         <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet">
+
         <link rel="stylesheet" href="css/ui-bootstrap-2.2.0-csp.css">
+
+        <!--link rel="stylesheet" href="css/jquery.datetimepicker.min.css"-->
 
     </head>
 
@@ -13,26 +16,36 @@
 
         <ng-view></ng-view>
     </body>
+    //check this js
+    <script src="js/jquery.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-2.2.0.min.js"></script>
+
 
     <script src="js/angular.min.js"></script>
    <script src="js/angular-route.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/ui-bootstrap-tpls-2.2.0.min.js"></script>
+
+    //services
     <script src="app/services/activity.service.js"></script>
     <script src="app/services/user.service.js"></script>
     <script src="app/services/timelog.service.js"></script>
     <script src="app/services/login.service.js"></script>
+
+    //login
     <script src="app/login-form/login-form.controller.js"></script>
     <script src="app/factories/login.interceptor.js"></script>
-
+    //activity
      <script src="app/activity/activity.controller.js"></script>
      <script src="app/activities/activities.controller.js"></script>
      <script src="app/activity-form/activity-form.controller.js"></script>
+   //user
     <script src="app/user/user.controller.js"></script>
     <script src="app/user-form/user-form.controller.js"></script>
     <script src="app/users/users.controller.js"></script>
+    //timelog
     <script src="app/timelog/timelogs.controller.js"></script>
     <script src="app/timelog/timelog-form.controller.js"></script>
-     <script src="app/config.js"></script>
+    // default
+    <script src="app/config.js"></script>
     <script src="app/app.js"></script>
 </html>

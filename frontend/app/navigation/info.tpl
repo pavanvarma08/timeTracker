@@ -2,8 +2,10 @@
 <navigation></navigation>
 
 <div class="bgimg-1">
+
     <div class="caption">
         <span class="border">ACTIVITY TIME TRACKER!</span>
+
     </div>
 </div>
 

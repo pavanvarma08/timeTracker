@@ -1,4 +1,4 @@
-function ActivitiesController(activityService) {
+function ActivitiesController(activityService, userService) {
     var vm = this;
 
     vm.$onInit = $onInit;
@@ -36,6 +36,11 @@ function ActivitiesController(activityService) {
     function refreshActivities() {
         return activityService.list().then(function refreshedActivities(response) {
             vm.activities = response.data;
+        });
+    }
+    function refreshUsers() {
+        return userService.list().then(function refreshedUsers(response) {
+            vm.users = response.data;
         });
     }
 

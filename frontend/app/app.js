@@ -110,7 +110,7 @@ angular.module('app', ['ngRoute'])
         controller: TimelogsController,
         controllerAs: 'vm',
     })
-
+    .component('adminnavigation', { templateUrl: 'app/navigation/adminnavigation.tpl' })
     .component('navigation', { templateUrl: 'app/navigation/navigation.tpl' })
     .component('info', { templateUrl: 'app/navigation/info.tpl' })
 
