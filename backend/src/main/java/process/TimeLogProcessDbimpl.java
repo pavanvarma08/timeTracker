@@ -40,7 +40,28 @@ public class TimeLogProcessDbimpl implements TimeLogProcess {
                 .ofNullable(this.timelogDAO.findByTime(timeID))
                 .orElseThrow(() -> new NotFoundException("timelog doesnt exist"));
     }
-    
+
+    @Override
+    public TimeLog addTime(Integer activityID) throws NotFoundException {
+        return this.timelogDAO.time(activityID);
+    }
+
+    @Override
+    public TimeLog findTimelog(Integer userId)
+    {
+        return this.timelogDAO.findByUser(userId);
+
+    }
+
+
+  /*  @Override
+    public TimeLog findTimelog(Integer userId, Integer activityID)
+    {
+        return this.timelogDAO.findingtimelog(userId, activityID);
+
+    }
+*/
+
     @Override
     public TimeLog findUser(Integer userID) throws NotFoundException
     { 

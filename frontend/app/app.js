@@ -110,6 +110,26 @@ angular.module('app', ['ngRoute'])
         controller: TimelogsController,
         controllerAs: 'vm',
     })
+
+
+    .component('overviewForm', {
+        templateUrl: 'app/overview/overview-form.tpl',
+        controller: OverviewFormController,
+        controllerAs: 'vm',
+
+        bindings: {
+            data: '<',
+            onSubmit: '<',
+            onReset: '<'
+        }
+    })
+
+    .component('overviews', {
+        templateUrl: 'app/overview/overviews.tpl',
+        controller:OverviewsController ,
+        controllerAs: 'vm',
+    })
+
     .component('adminnavigation', { templateUrl: 'app/navigation/adminnavigation.tpl' })
     .component('navigation', { templateUrl: 'app/navigation/navigation.tpl' })
     .component('info', { templateUrl: 'app/navigation/info.tpl' })

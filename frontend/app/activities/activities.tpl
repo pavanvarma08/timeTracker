@@ -15,15 +15,12 @@
             </div>
         </div>
     </div>
-
-
     <!--div class="form-group">
         <label for="repeatSelect"> Activities </label>
         <select name="repeatSelect" id="repeatSelect" ng-model="data">
             <option ng-repeat="activity in vm.activities" value="{{activity.title}}">{{activity.title}}</option>
         </select>
     </div-->
-
     <!--div class="row">
         <activity class="col-xs-6" ng-repeat="activity in vm.activities" data="activity"></activity>
     </div-->

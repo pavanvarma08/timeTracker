@@ -27,7 +27,6 @@
     <div class="panel-footer text-center">
 
         <button type="submit" class="btn btn-xs btn-success">Submit</button>
-
         <button type="reset" class="btn btn-xs btn-default" ng-click="vm.onReset()">Reset</button>
 
 </div>

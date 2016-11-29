@@ -20,5 +20,11 @@ public interface TimeLogProcess {
 
     TimeLog findActivity(Integer activityID) throws NotFoundException;
 
+    TimeLog findTimelog(Integer userId);
+
+   // TimeLog findTimelog(Integer userId, Integer activityID);
+
+    TimeLog addTime(Integer activityID);
+
     void delete(Integer timeID);
 }

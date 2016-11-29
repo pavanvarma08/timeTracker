@@ -26,12 +26,31 @@ public class TimeLogResource {
     public List<TimeLog> timeLogList() {
         return this.timelogProcess.list();}
 
-    @GET
+    /*@GET
+    public TimeLog getaddedTime(Integer activityID)  {
+        return this.timelogProcess.addTime(activityID);
+    }*/
+
+   /* @GET
     @Path("/{timeID}")
        public TimeLog getTimeLog(@PathParam("timeID") Integer timeID) throws javassist.NotFoundException {
        return this.timelogProcess.findTime(timeID);
     }
+*/
+    @GET
+    @Path("/{userId}")
+    public TimeLog timeloguser( @PathParam("userId")Integer userId)
+    {
+        return this.timelogProcess.findTimelog(userId);
+    }
 
+    /*  @GET
+    @Path("{activityID}")
+    public TimeLog timeloguser( @PathParam("userId")Integer userId, @PathParam("activityID") Integer activityID)
+    {
+        return this.timelogProcess.findTimelog(userId, activityID);
+    }
+    */
     @POST
     public TimeLog createTimeLog(TimeLog timelog)
     {
@@ -43,15 +62,10 @@ public class TimeLogResource {
     public TimeLog updateTimeLog(@PathParam("timeID") Integer timeID,@Valid TimeLog timelog) throws NotFoundException {
         return this.timelogProcess.update(timeID, timelog);}
 
-
     @DELETE
     @Path("/{timeID}")
     public void deleteTimeLog ( @PathParam("timeID") Integer timeID) {
         this.timelogProcess.delete(timeID);
     }
-
-
-
-
 }
 

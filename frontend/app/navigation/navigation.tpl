@@ -16,7 +16,7 @@
 
                 <li ><a ng-href="#/activity" >Activity</a></li>
                 <li><a ng-href="#/users">User Page</a></li>
-                <li><a>Overview</a></li>
+                <li><a ng-href="#/overviewAdmin">Overview</a></li>
                 <li><a ng-href="#/">Logout</a></li>
 
 
