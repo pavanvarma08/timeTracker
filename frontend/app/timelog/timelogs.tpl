@@ -15,11 +15,8 @@
 
 
                 <li ><a ng-href="#/timelogs">Timelog</a></li>
-                <li><a>Overview</a></li>
+                <li><a ng-href="#/overviewUser">Overview</a></li>
                 <li><a ng-href="#/">Logout</a></li>
-
-
-
             </ul>
         </div>
     </div>
@@ -45,7 +42,7 @@
 
     <div class="form-group pull-right col-xs-4"><input type="text" id="myInput" class="search form-control" ng-change="vm.myFunction()" ng-model="value" placeholder="Search for names.."/>
     </div>
-    <div class="col-xs-6 text-right" >
+    <div class="col-xs-6 text-right">
         <h1>Timelogs</h1>
     </div>
 
@@ -55,7 +52,6 @@
             <th> ActivityID </th>
             <th> Date</th>
             <th> Time</th>
-
         </tr>
         </thead>
         <tbody>
@@ -67,24 +63,6 @@
             <td> {{timelogs.time}}</td>
 
         </tr>
-
-
-
         </tbody>
     </table>
-
-
-    <!--div class="form-group">
-        <label for="repeatSelect"> Activities </label>
-        <select name="repeatSelect" id="repeatSelect" ng-model="data">
-
-            <option ng-repeat="activity in vm.activities" value="{{activity.title}}">{{activity.title}}</option>
-
-        </select>
-
-    </div-->
-
-    <!--div class="row">
-        <timelog class="col-xs-6" ng-repeat="activity in vm.timelogs" data="timelog"></timelog>
-    </div-->
 </div>

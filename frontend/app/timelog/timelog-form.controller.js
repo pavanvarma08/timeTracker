@@ -1,15 +1,12 @@
 function TimelogFormController(timelogService,activityService) {
     var vm = this;
 
-
     vm.$onInit = $onInit;
 
     vm.sendTimeLog = vm.sendTimeLog || onUserDidSubmitTimeLog;
     vm.onReset  = vm.onReset || onUserDidResetTimeLog;
     vm.refreshActivities = refreshActivities;
     vm.showError = showError;
-
-
 
     function $onInit() {
         vm.refreshActivities();

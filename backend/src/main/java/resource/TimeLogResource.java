@@ -1,10 +1,10 @@
 package resource;
 
 import db.entity.TimeLog;
-import javassist.*;
 import javassist.NotFoundException;
 import process.TimeLogProcess;
 
+import javax.annotation.security.PermitAll;
 import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -26,11 +26,29 @@ public class TimeLogResource {
     public List<TimeLog> timeLogList() {
         return this.timelogProcess.list();}
 
+
+   /* @PermitAll
     @GET
-    @Path("/{timeID}")
-       public TimeLog getTimeLog(@PathParam("timeID") Integer timeID) throws javassist.NotFoundException {
-       return this.timelogProcess.findTime(timeID);
+    public List<TimeLog> advancelist(@QueryParam("userId") Integer userId)
+    {
+            return this.timelogProcess.findTimelog(userId);
+    }*/
+
+    @GET
+    @Path("/{userId}")
+    public List<TimeLog> timeloguser( @PathParam("userId")Integer userId)
+    {
+        return this.timelogProcess.findTimelog(userId);
     }
+
+/*
+    @POST
+    @Path("/list")
+    public List<TimeLog> timeloguser( TimeLog timelog)
+    {
+        return this.timelogProcess.findTimelog(timelog);
+    }
+*/
 
     @POST
     public TimeLog createTimeLog(TimeLog timelog)
@@ -43,15 +61,10 @@ public class TimeLogResource {
     public TimeLog updateTimeLog(@PathParam("timeID") Integer timeID,@Valid TimeLog timelog) throws NotFoundException {
         return this.timelogProcess.update(timeID, timelog);}
 
-
     @DELETE
     @Path("/{timeID}")
     public void deleteTimeLog ( @PathParam("timeID") Integer timeID) {
         this.timelogProcess.delete(timeID);
     }
-
-
-
-
 }
 

@@ -22,7 +22,7 @@ function LoginFormController(loginService, $location) {
             if(response.status == 200)
             {
                 loginService.SetCredentials(username, password);
-                console.log(response.data.adminCheck)
+              //  console.log(response.data.adminCheck);
                 if (response.data.adminCheck === 1) { $location.path('/activity'); }
                 else { $location.path('/timelogs') }
             }

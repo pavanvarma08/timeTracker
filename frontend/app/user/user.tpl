@@ -20,5 +20,5 @@
 
     </div>
 
-    <user-form ng-switch-when="true" data="vm.data" on-submit="vm.submitEditedUser" on-reset="vm.resetEditedUser"></user-form>
+    <user-form ng-switch-when="true" data="vm.data" on-submit="vm.submitEditedUser" on-reset="vm.resetEditedUser"> {{vm.data.userId}} {{user.userId}}</user-form>
 </div>

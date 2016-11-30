@@ -4,7 +4,7 @@
     <div class="panel-body ">
         <div class="form-group">
 
-            <label class="col-sm-2 control-label" for="adminID">Activity admin</label>
+            <label class="col-sm-2 control-label" for="adminID">Activity admin </label>
             <div class ="col-sm-5">
             <input id="adminID" name="adminID" class="form-control" ng-model="vm.adminID" type="number" placeholder="Administrator of activity" autocomplete="off" required = " ">
             </div>
@@ -27,7 +27,6 @@
     <div class="panel-footer text-center">
 
         <button type="submit" class="btn btn-xs btn-success">Submit</button>
-
         <button type="reset" class="btn btn-xs btn-default" ng-click="vm.onReset()">Reset</button>
 
 </div>

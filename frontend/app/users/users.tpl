@@ -45,7 +45,9 @@
         <td> {{user.firstname}}</td>
         <td> {{user.lastname}}</td>
         <td>
-            <a ng-click="vm.editUser()" class="btn btn-xs btn-info"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a><a ng-click="vm.removeUser()" class="btn btn-xs btn-danger">
+{{user.userId}}
+            {{user.username}}
+            <a ng-click="vm.editUser()" class="btn btn-xs btn-info"><i class="fa fa-pencil-square-o" aria-hidden="true"> </i></a><a ng-click="vm.removeUser()" class="btn btn-xs btn-danger">
 
             <i class="fa fa-trash-o" aria-hidden="true"></i>
         </a></td>

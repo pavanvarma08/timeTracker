@@ -19,18 +19,18 @@ function UsersController(userService) {
         vm.users = [];
         vm.refreshUsers();
         vm.myFunction();
-        vm.resetEditedUser();
+      //  vm.resetEditedUser();
     }
     function editUser(){
         vm.isEditingUser = true;
     }
     function removeUser() {
-        userService.destroy(vm.data.userId)
+        userService.destroy(user.userId)
             .then(vm.usersController.refreshUsers());
     }
 
     function submitEditedUser(username, password, firstname, lastname, adminCheck) {
-        return userService.update(vm.data.userId, username, password, firstname, lastname, adminCheck)
+        return userService.update(user.userId, username, password, firstname, lastname, adminCheck)
             .then(vm.usersController.refreshUsers)
             .then(vm.resetEditedUser)
             .catch(vm.showError);

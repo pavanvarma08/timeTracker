@@ -19,6 +19,7 @@ function UserController(userService) {
     function editUser(){
         vm.isEditingUser = true;
     }
+
     function removeUser() {
         userService.destroy(vm.data.userId)
             .then(vm.usersController.refreshUsers());

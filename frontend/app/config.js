@@ -3,6 +3,8 @@ function appConfig($routeProvider, $httpProvider) {
         .when('/', {template: '<login-form></login-form>'})
         .when('/activity', { template: '<activities></activities>' })
         .when('/users', { template: '<users></users>' })
+        .when('/overview', { template: '<overview-form></overview-form>'})
+        .when('/overviews', {template: '<overviews></overviews>'})
         .when('/timelogs', {template: '<timelogs></timelogs>'})
         .when('/info', {template: '<info></info>'})
         .otherwise({

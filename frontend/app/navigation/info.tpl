@@ -66,7 +66,7 @@
 
     }
     .bgimg-1 {
-        background-image: url("../../img_parallax1.jpg");
+        background-image: url("../../time2.jpg");
         min-height: 100%;
     }
 
