@@ -1,10 +1,7 @@
 function timelogService($http, $interpolate) {
-<<<<<<< HEAD
+
     var timelog = $interpolate('/api/timelog');
     var overview = $interpolate('/api/timelog/{{userId}}');
-=======
-    var timelog = $interpolate('/api/timelog/{{userId}}');
->>>>>>> df36648afe354889fd7c1bb9d304bcd72a4a44c8
 
     return {
         list: list,
@@ -19,11 +16,8 @@ function timelogService($http, $interpolate) {
     }
 
     function find( userId) {
-<<<<<<< HEAD
+
         return $http.get(overview({userId: userId}));
-=======
-        return $http.get(timelog({userId: userId }));
->>>>>>> df36648afe354889fd7c1bb9d304bcd72a4a44c8
 
     }
 

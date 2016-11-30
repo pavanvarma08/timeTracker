@@ -28,32 +28,17 @@ public interface TimeLogDAO {
 
     @SqlQuery(" SELECT * FROM `timelog` WHERE activityID = :activityID")
     TimeLog findByActivity( @Bind("activityID") Integer activityID);
-<<<<<<< HEAD
-=======
 
-    @SqlQuery(" SELECT * FROM `timelog` WHERE userID = :userID")
-    TimeLog findByUser(@Bind("userID") Integer userID);
->>>>>>> df36648afe354889fd7c1bb9d304bcd72a4a44c8
 
    @SqlQuery(" SELECT * FROM `timelog` WHERE userID = :userID")
     List<TimeLog> findByUser(@Bind("userID") Integer userID);
-/*
-@SqlQuery("SELECT timelog.timeID, timelog.userID, timelog.activityID, activity.title, timelog.date , timelog.time FROM `timelog`,`activity` WHERE timelog.userID= :userID AND timelog.activityID = activity.activityID")
-    List<TimeLog> findByUser(@Bind("userID") Integer userID);
-*/
+
     @SqlUpdate (" DELETE FROM `timelog` WHERE timeID = :timeID")
     int deleteByTime(@Bind("timeID") Integer timeID);
-<<<<<<< HEAD
 
     @SqlQuery (" SELECT * FROM `timelog` WHERE userID = :userID")
     List<TimeLog> findingtimelog( @Bind("userID") Integer userID);
 
-=======
-
-    @SqlQuery (" SELECT * FROM `timelog` WHERE activityID = :activityID AND userID = :userID")
-    TimeLog findingtimelog( @Bind("userID") Integer userID, @Bind("activityID") Integer activityID );
-
->>>>>>> df36648afe354889fd7c1bb9d304bcd72a4a44c8
    /* @SqlQuery (" SELECT * FROM `timelog` WHERE activityID = :activityID AND userID = :userID")
     TimeLog findingtimelog(@BindBean TimeLog timelog);*/
 
