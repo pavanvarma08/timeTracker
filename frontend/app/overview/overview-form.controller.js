@@ -4,7 +4,11 @@ function OverviewFormController(timelogService, activityService, userService) {
 
     vm.viewAdmin = vm.viewAdmin || onAdminDidSubmit;
     vm.onReset  = vm.onReset || onAdminDidReset;
+<<<<<<< HEAD
     vm.refreshTimelog = refreshTimelog;
+=======
+    //vm.refreshTimelog = refreshTimelog;
+>>>>>>> df36648afe354889fd7c1bb9d304bcd72a4a44c8
 
     vm.refreshActivities = refreshActivities;
    vm.refreshUsers = refreshUsers;
@@ -12,7 +16,11 @@ function OverviewFormController(timelogService, activityService, userService) {
 
     function $onInit() {
         vm.refreshActivities();
+<<<<<<< HEAD
        vm.refreshTimelog();
+=======
+      //  vm.refreshTimelog();
+>>>>>>> df36648afe354889fd7c1bb9d304bcd72a4a44c8
        vm.refreshUsers();
        vm.overview=[];
     }
@@ -24,12 +32,20 @@ function OverviewFormController(timelogService, activityService, userService) {
                 });
     }
 
+<<<<<<< HEAD
     function refreshTimelog() {
         return timelogService.list().then(function refreshedTimelog(response) {
             vm.timelogs = response.data;
         });
     }
 
+=======
+    /*function refreshTimelog() {
+        return timelogService.list().then(function refreshedTimelog(response) {
+            vm.timelogs = response.data;
+        });
+    }*/
+>>>>>>> df36648afe354889fd7c1bb9d304bcd72a4a44c8
     function refreshActivities() {
         return activityService.list().then(function refreshedActivities(response) {
             vm.activities = response.data;

@@ -35,6 +35,7 @@
         </tr>
         </thead>
         <tbody>
+<<<<<<< HEAD
 
 
         <tr ng-repeat="timelog in vm.overview" data="overview" >
@@ -43,6 +44,15 @@
             <td> {{timelog.userID}}</td>
             <td> {{timelog.date}} </td>
             <td> {{timelog.time}}</td>
+=======
+        {{vm.overview}}
+        <tr ng-repeat="overview in vm.overview" data="overview" >
+
+            <td> {{overview.activityID}}</td>
+            <td> {{overview.userId}}</td>
+            <td> {{overview.date}} </td>
+            <td> {{overview.time}}</td>
+>>>>>>> df36648afe354889fd7c1bb9d304bcd72a4a44c8
 
         </tr>
         </tbody>

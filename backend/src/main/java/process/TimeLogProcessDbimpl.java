@@ -46,6 +46,25 @@ public class TimeLogProcessDbimpl implements TimeLogProcess {
         return this.timelogDAO.time(activityID);
     }
 
+<<<<<<< HEAD
+=======
+    @Override
+    public TimeLog findTimelog(Integer userId)
+    {
+        return this.timelogDAO.findByUser(userId);
+
+    }
+
+
+  /*  @Override
+    public TimeLog findTimelog(Integer userId, Integer activityID)
+    {
+        return this.timelogDAO.findingtimelog(userId, activityID);
+
+    }
+*/
+
+>>>>>>> df36648afe354889fd7c1bb9d304bcd72a4a44c8
     @Override
     public List<TimeLog> findTimelog(Integer userId)
     {

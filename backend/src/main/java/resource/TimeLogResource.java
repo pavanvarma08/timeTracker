@@ -26,6 +26,7 @@ public class TimeLogResource {
     public List<TimeLog> timeLogList() {
         return this.timelogProcess.list();}
 
+<<<<<<< HEAD
 
    /* @PermitAll
     @GET
@@ -39,8 +40,27 @@ public class TimeLogResource {
     public List<TimeLog> timeloguser( @PathParam("userId")Integer userId)
     {
         return this.timelogProcess.findTimelog(userId);
+=======
+    /*@GET
+    public TimeLog getaddedTime(Integer activityID)  {
+        return this.timelogProcess.addTime(activityID);
+    }*/
+
+   /* @GET
+    @Path("/{timeID}")
+       public TimeLog getTimeLog(@PathParam("timeID") Integer timeID) throws javassist.NotFoundException {
+       return this.timelogProcess.findTime(timeID);
+>>>>>>> df36648afe354889fd7c1bb9d304bcd72a4a44c8
+    }
+*/
+    @GET
+    @Path("/{userId}")
+    public TimeLog timeloguser( @PathParam("userId")Integer userId)
+    {
+        return this.timelogProcess.findTimelog(userId);
     }
 
+<<<<<<< HEAD
 /*
     @POST
     @Path("/list")
@@ -50,6 +70,15 @@ public class TimeLogResource {
     }
 */
 
+=======
+    /*  @GET
+    @Path("{activityID}")
+    public TimeLog timeloguser( @PathParam("userId")Integer userId, @PathParam("activityID") Integer activityID)
+    {
+        return this.timelogProcess.findTimelog(userId, activityID);
+    }
+    */
+>>>>>>> df36648afe354889fd7c1bb9d304bcd72a4a44c8
     @POST
     public TimeLog createTimeLog(TimeLog timelog)
     {
