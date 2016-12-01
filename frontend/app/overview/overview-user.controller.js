@@ -1,7 +1,7 @@
 /**
  * Created by PAVAN VARMA on 01-Dec-16.
  */
-function OverviewUserController(timelogService, activityService, userService, logService) {
+function OverviewUserController(timelogService, activityService, userService, logService, $cookies) {
     var vm = this;
     vm.$onInit = $onInit;
 
@@ -63,7 +63,8 @@ function OverviewUserController(timelogService, activityService, userService, lo
     }
 
     function refreshlog() {
-        return logService.list().then(function refreshedUsers(response) {
+        var id = $cookies.get('username');
+        return logService.view(id).then(function refreshedUsers(response) {
             vm.logs = response.data;
         });
     }

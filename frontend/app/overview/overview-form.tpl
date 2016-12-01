@@ -10,13 +10,13 @@
         <div class="col-xs-3"></div>
         <div class="col-xs-6">
 
-<form name="vm.overviewForm" ng-submit="vm.viewAdmin(vm.username)" class="form-inline">
+<form name="vm.overviewForm" ng-submit="vm.viewAdmin(vm.username)" class="form-horizontal">
        <div class="form-group">
            <div class="text-center">
            <!--<h3> <p class="bg-info"> Search for particular user </p> </h3>-->
            </div>
-            <label  class="col-xs-6 control-label" for="username"> User List </label>
-           <div class="col-xs-3">
+            <label  class="col-md-6 control-label" for="username"> User List </label>
+           <div class="col-md-3">
             <select name="username" id="username" ng-model="vm.username">
                 <option ng-repeat="user in vm.users" value="{{user.username}}">{{user.username}}</option>
             </select>
@@ -25,18 +25,11 @@
         </div>
 </form>
 </div>
-        <div class="col-xs-3"></div>
 
-        </div>
-        <div class="col-xs-3">
-
-        </div>
-
-
-    <div class="col-xs-12 text-center">
+    <div class="col-xs-6 text-center">
         <h1><p class="bg-success"> Completed</p></h1>
-    </div>
-    <div class="row">
+
+
         <!--<div class="col-xs-6 text-right">-->
         <!--<h1>Timelogs</h1>-->
         <!--</div>-->
@@ -62,12 +55,10 @@
 
     </div>
 
-
-
-    <div class="col-xs-12 text-center">
+    <div class="col-xs-6 text-center">
 <h1><p class="bg-success"> Timelogs</p></h1>
-</div>
-<div class="row">
+
+
 <!--<div class="col-xs-6 text-right">-->
     <!--<h1>Timelogs</h1>-->
 <!--</div>-->
@@ -103,14 +94,14 @@
 
 
 
-    <!--div class="text-center">
-        <h1> <p class="bg-warning"> overall data</p></h1>
+    <div class="col-xs-12 text-center">
+        <h1> <p class="bg-warning"> Log data</p></h1>
 
     </div>
 
     <div class="row">
 
-    <table id="myTable1" class="table table-striped table-bordered">
+    <table id="myTable2" class="table table-striped table-bordered">
     <thead class="thead-inverse">
     <tr>
         <th>Username</th>
@@ -133,7 +124,7 @@
     </tr>
     </tbody>
 </table>
-</div--></div>
+</div></div>
 
 </div>
 </div>
