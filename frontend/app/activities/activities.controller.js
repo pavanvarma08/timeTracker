@@ -48,10 +48,8 @@ function ActivitiesController(activityService, userService, $cookies) {
     function refreshActivities() {
         return activityService.list().then(function refreshedActivities(response) {
             vm.activities = response.data;
+            vm.hello = $cookies.getAll();
 
-            vm.us= $cookies.get('adminCheck');
-            vm.usero = $cookies.get('username');
-            vm.uid= $cookies.get('userId');
         });
     }
     function refreshUsers() {

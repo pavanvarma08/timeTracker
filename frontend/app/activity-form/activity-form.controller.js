@@ -1,4 +1,4 @@
-function ActivityFormController(activityService) {
+function ActivityFormController(activityService, $cookies) {
     var vm = this;
 
     vm.$onInit = $onInit;
@@ -19,8 +19,10 @@ function ActivityFormController(activityService) {
 
     }
 
-    function onUserDidSubmit(adminID, title, description) {
-        return activityService.create(adminID, title, description)
+    function onUserDidSubmit(title, description) {
+
+        var id = $cookies.get('userid');
+        return activityService.create( id, title, description)
             .then(vm.activitiesController.refreshActivities)
             .then(onUserDidReset)
             .catch(vm.showError);
@@ -34,7 +36,7 @@ function ActivityFormController(activityService) {
     }
 
     function onUserDidReset() {
-        vm.adminID = '';
+
         vm.title = '';
         vm.description  = '';
 
