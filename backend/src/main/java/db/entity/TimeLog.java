@@ -1,6 +1,8 @@
 package db.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import java.util.Date;
 
@@ -15,20 +17,33 @@ public class TimeLog {
     @JsonProperty
     private float time;
 
-    @JsonProperty
+  /*  @JsonProperty
     private Integer activityID;
 
     @JsonProperty
-    private Integer userID;
+    private Integer userId;
+
+*/
+
+    @JsonProperty
+    private String title;
+
+    @JsonProperty
+    private String username;
+
 
     public TimeLog() {}
 
-    public TimeLog( Integer timeID, Date date, float time, Integer activityID, Integer userID) {
+    public TimeLog( Integer timeID, Date date, float time, String username, String title) {
         this.timeID= timeID;
         this.date = date;
         this.time = time;
-        this.activityID = activityID;
-        this.userID = userID;
+        this.title = title;
+        this.username = username;
+       /* this.activityID = activityID;
+        this.userId = userId;
+
+           */
     }
 
     public Integer getTimeID() { return timeID;}
@@ -43,13 +58,29 @@ public class TimeLog {
 
     public void setTime(float time){ this.time = time; }
 
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getUsername() { return username;}
+
+    public void setUsername(String username) { this.username=username;}
+
+/*
     public Integer getActivityID(){ return activityID;}
 
     public void setActivityID(Integer activityID)  {this.activityID = activityID;}
 
-    public Integer getUserID() {return userID;}
+    public Integer getUserId() {return userId;}
 
-    public void setUserID(Integer userID) {this.userID = userID;}
+    public void setUserId(Integer userId) {this.userId = userId;}
+
+    */
 }
 
 

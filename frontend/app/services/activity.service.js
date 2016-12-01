@@ -1,5 +1,6 @@
 function activityService($http, $interpolate) {
     var activity = $interpolate('/api/activity/{{activityID}}');
+    var activityc = $interpolate('/api/activity');
 
     return {
         list: list,
@@ -20,7 +21,7 @@ function activityService($http, $interpolate) {
             description: description
         };
 
-        return $http.post(activity(), data);
+        return $http.post(activityc(), data);
     }
 
     function fetch(title)

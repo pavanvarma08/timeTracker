@@ -1,4 +1,4 @@
-function TimelogsController(timelogService,activityService,userService) {
+function TimelogsController(timelogService,activityService,userService, $cookies) {
     var vm = this;
 
     vm.$onInit = $onInit;
@@ -33,8 +33,11 @@ function TimelogsController(timelogService,activityService,userService) {
         }
     }
     function refreshTimelog() {
-        return timelogService.list().then(function refreshedTimelog(response) {
+
+        var news = $cookies.get('username');
+        return timelogService.list(news).then(function refreshedTimelog(response) {
             vm.timelogs = response.data;
+            vm.ho= $cookies.getAll();
         });
     }
     function hasTimelog() {

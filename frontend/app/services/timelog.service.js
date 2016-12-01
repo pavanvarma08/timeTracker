@@ -1,7 +1,7 @@
 function timelogService($http, $interpolate) {
 
     var timelog = $interpolate('/api/timelog');
-    var overview = $interpolate('/api/timelog/{{userId}}');
+    var overview = $interpolate('/api/timelog/{{username}}');
 
     return {
         list: list,
@@ -11,8 +11,8 @@ function timelogService($http, $interpolate) {
         update: update
     };
 
-    function list() {
-        return $http.get( timelog());
+    function list(username) {
+        return $http.get( overview({username: username}));
     }
 
     function find( userId) {
@@ -21,11 +21,13 @@ function timelogService($http, $interpolate) {
 
     }
 
-    function create(date, time, activityID) {
+    function create( date, time, title, username) {
         var data = {
+
             date: date,
             time: time,
-            activityID: activityID
+            title: title,
+            username: username
         };
 
         return $http.post(timelog(), data);

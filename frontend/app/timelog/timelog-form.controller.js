@@ -1,4 +1,4 @@
-function TimelogFormController(timelogService,activityService) {
+function TimelogFormController(timelogService,activityService, $cookies) {
     var vm = this;
 
     vm.$onInit = $onInit;
@@ -16,9 +16,10 @@ function TimelogFormController(timelogService,activityService) {
         vm.activityID  = parentControllerHasSetData ? vm.data.activityID  : '';
     }
 
-    function onUserDidSubmitTimeLog(date, time, activityID) {
+    function onUserDidSubmitTimeLog(date, time, title) {
 
-        return timelogService.create(date, time, activityID)
+        var ids = $cookies.get('username');
+        return timelogService.create( date, time, title, ids)
                 .then(vm.timelogsController.refreshTimelog())
                 .then(onUserDidResetTimeLog)
                 .catch(vm.showError);
@@ -27,6 +28,7 @@ function TimelogFormController(timelogService,activityService) {
     function refreshActivities() {
         return activityService.list().then(function refreshedActivities(response) {
             vm.activities = response.data;
+            vm.id =$cookies.getAll();
         });
     }
     function onUserDidResetTimeLog() {

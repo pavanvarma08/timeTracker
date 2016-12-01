@@ -26,8 +26,8 @@ public class TimeLogProcessDbimpl implements TimeLogProcess {
 
         timelog.setTime(updatedTimeLog.getTime());
         timelog.setDate(updatedTimeLog.getDate());
-        timelog.setActivityID(updatedTimeLog.getActivityID());
-        timelog.setUserID(updatedTimeLog.getUserID());
+        timelog.setTitle(updatedTimeLog.getTitle());
+        timelog.setUsername(updatedTimeLog.getUsername());
         
         this.timelogDAO.update(timelog);
 
@@ -42,17 +42,33 @@ public class TimeLogProcessDbimpl implements TimeLogProcess {
     }
 
     @Override
-    public TimeLog addTime(Integer activityID) throws NotFoundException {
-        return this.timelogDAO.time(activityID);
+    public TimeLog addTime(String title ) throws NotFoundException {
+        return this.timelogDAO.time(title);
     }
 
 
     @Override
-    public List<TimeLog> findTimelog(Integer userId)
+    public List<TimeLog> findTimelog(String username)
     {
-        return this.timelogDAO.findByUser(userId);
+        return this.timelogDAO.listofuser(username);
 
     }
+
+    @Override
+    public void delete(Integer timeID) {
+        this.timelogDAO.deleteByTime(timeID);
+    }
+
+    /*
+    @Override
+    public TimeLog findActivity(Integer activityID) throws NotFoundException
+    {
+        return Optional
+                .ofNullable(this.timelogDAO.findByActivity(activityID))
+                .orElseThrow(() -> new NotFoundException("activity does not exist"));
+    }
+  */
+
 
 
   /*  @Override
@@ -81,26 +97,13 @@ public class TimeLogProcessDbimpl implements TimeLogProcess {
 */
 
    /* @Override
-    public TimeLog findUser(Integer userID) throws NotFoundException
-    { 
-        return Optional
-                .ofNullable(this.timelogDAO.findByUser(userID))
-                .orElseThrow(() -> new NotFoundException(" user does not exist"));
-        
-    }
-  */
-
-    @Override
-    public TimeLog findActivity(Integer activityID) throws NotFoundException
+    public TimeLog findUser(Integer userId) throws NotFoundException
     {
         return Optional
-                .ofNullable(this.timelogDAO.findByActivity(activityID))
-                .orElseThrow(() -> new NotFoundException("activity does not exist"));
+                .ofNullable(this.timelogDAO.findByUser(userId))
+                .orElseThrow(() -> new NotFoundException(" user does not exist"));
+
     }
-    
-    @Override
-    public void delete(Integer timeID) {
-        this.timelogDAO.deleteByTime(timeID);
-    }
+  */
 
 }

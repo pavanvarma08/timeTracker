@@ -8,22 +8,10 @@ function ActivitiesController(activityService, userService, $cookies) {
    // vm.hasCookies = hasCookies;
     function $onInit() {
         vm.activities = [];
-        vm.u_id =[];
         vm.refreshActivities();
        vm.myFunction();
     }
 
-  /*  function hasCookies() {
-        var authdata = $cookies.get('authdata') || null;
-        vm.user = $cookies.get('userId');
-        vm.names = $cookies.get('username');
-        //console.log(role);
-        if (authdata!= null){
-            vm.products= [1];
-        }
-
-    }
-*/
     //Search panel JS
     function myFunction()
     {

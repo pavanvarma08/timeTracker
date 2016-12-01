@@ -1,10 +1,10 @@
-<form name="vm.timelogForm" ng-submit="vm.sendTimeLog(vm.date, vm.time, vm.activityID)" class="form-horizontal">
+<form name="vm.timelogForm" ng-submit="vm.sendTimeLog(vm.date, vm.time, vm.title)" class="form-horizontal">
     <div class="row">
         <div class="form-group">
-            <label  for="activityID"> Activities Title </label>
-            <select name="activityID" id="activityID" ng-model="vm.activityID">
+            <label  for="title"> Activities Title  </label>
+            <select name="title" id="title" ng-model="vm.title">
                 <option value=" 1 is Not null">ALL</option>
-                <option ng-repeat="activity in vm.activities" value="{{activity.activityID}}">{{activity.title}}</option>
+                <option ng-repeat="activity in vm.activities" value="{{activity.title}}">{{activity.title}}</option>
             </select>
         </div>
         <div class="form-group">

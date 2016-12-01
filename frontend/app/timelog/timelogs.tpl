@@ -43,13 +43,14 @@
     <div class="form-group pull-right col-xs-4"><input type="text" id="myInput" class="search form-control" ng-change="vm.myFunction()" ng-model="value" placeholder="Search for names.."/>
     </div>
     <div class="col-xs-6 text-right">
-        <h1>Timelogs</h1>
+        <h1>Timelogs  </h1>
     </div>
+
 
     <table id="myTable" class="table table-striped table-bordered">
         <thead class="thead-inverse">
         <tr>
-            <th> ActivityID </th>
+            <th> Activity Title </th>
             <th> Date</th>
             <th> Time</th>
         </tr>
@@ -58,7 +59,7 @@
 
         <tr ng-repeat="timelogs in vm.timelogs" data="timelogs" >
 
-            <td> {{timelogs.activityID}}</td>
+            <td> {{timelogs.title}}</td>
             <td> {{timelogs.date}} </td>
             <td> {{timelogs.time}}</td>
 

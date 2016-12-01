@@ -27,9 +27,9 @@ public class TimeLogResource {
         return this.timelogProcess.list();}
 
     @GET
-    @Path("/{userId}")
-    public List<TimeLog> timeloguser( @PathParam("userId")Integer userId) {
-        return this.timelogProcess.findTimelog(userId);
+    @Path("/{username}")
+    public List<TimeLog> timeloguser( @PathParam("username") String username) {
+        return this.timelogProcess.findTimelog(username);
     }
 
     @POST
