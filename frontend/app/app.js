@@ -3,8 +3,8 @@ angular.module('app', ['ngRoute', 'ngCookies'])
     .factory('userService', userService)
     .factory('timelogService', timelogService)
     .factory('loginService', loginService)
+    .factory('logService', logService)
     .factory('loginInterceptor', loginInterceptor)
-
 
    // ACTIVITY COMPONENTS
     .component('activityForm', {
@@ -125,10 +125,16 @@ angular.module('app', ['ngRoute', 'ngCookies'])
         }
     })
 
-    .component('overviews', {
-        templateUrl: 'app/overview/overviews.tpl',
-        controller:OverviewsController ,
-        controllerAs: 'vm'
+    .component('overviewUser', {
+        templateUrl: 'app/overview/overview-user.tpl',
+        controller:OverviewUserController ,
+        controllerAs: 'vm',
+
+        bindings: {
+            data: '<',
+            onSubmit: '<',
+            onReset: '<'
+        }
     })
 
     .component('navigation', {

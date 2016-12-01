@@ -9,9 +9,6 @@ import io.dropwizard.db.DataSourceFactory;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-/**
- * Created by Alex on 21/10/2016.
- */
 public class TimeTrackerConfiguration extends Configuration implements AssetsBundleConfiguration {
 
     @Valid

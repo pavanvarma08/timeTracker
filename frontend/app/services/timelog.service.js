@@ -4,12 +4,18 @@ function timelogService($http, $interpolate) {
     var overview = $interpolate('/api/timelog/{{username}}');
 
     return {
+        view: view,
         list: list,
         create: create,
         destroy: destroy,
         find: find,
         update: update
     };
+
+
+    function view() {
+        return $http.get(timelog());
+    }
 
     function list(username) {
         return $http.get( overview({username: username}));

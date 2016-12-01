@@ -21,6 +21,7 @@ public interface TimeLogProcess {
  //   TimeLog findActivity(Integer activityID) throws NotFoundException;
 
    List<TimeLog> findTimelog(String username);
+    List<TimeLog> findActivity(String title);
 
     TimeLog addTime(String title);
 

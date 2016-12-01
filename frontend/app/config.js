@@ -4,7 +4,7 @@ function appConfig($routeProvider, $httpProvider) {
         .when('/activity', { template: '<activities></activities>' ,resolve:{loggedIn:onlyLoggedIn}})
         .when('/users', { template: '<users></users>' ,resolve:{loggedIn:onlyLoggedIn}})
         .when('/overview', { template: '<overview-form></overview-form>' ,resolve:{loggedIn:onlyLoggedIn}})
-        .when('/overviews', {template: '<overviews></overviews>',resolve:{loggedIn:onlyLoggedIn}})
+        .when('/overviews', {template: '<overview-user></overview-user>',resolve:{loggedIn:onlyLoggedIn}})
         .when('/timelogs', {template: '<timelogs></timelogs>',resolve:{loggedIn:onlyLoggedIn}})
         .when('/info', {template: '<info></info>'})
         .otherwise({

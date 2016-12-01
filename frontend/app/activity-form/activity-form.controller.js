@@ -12,11 +12,8 @@ function ActivityFormController(activityService, $cookies) {
     function $onInit() {
         var parentControllerHasSetData = angular.isDefined(vm.data);
         vm.adminID = parentControllerHasSetData ? vm.data.adminID : '';
-
         vm.title = parentControllerHasSetData ? vm.data.title : '';
         vm.description  = parentControllerHasSetData ? vm.data.description  : '';
-
-
     }
 
     function onUserDidSubmit(title, description) {

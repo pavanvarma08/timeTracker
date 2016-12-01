@@ -1,4 +1,4 @@
-function TimelogFormController(timelogService,activityService, $cookies) {
+function TimelogFormController(timelogService,activityService, $cookies, logService) {
     var vm = this;
 
     vm.$onInit = $onInit;
@@ -13,16 +13,26 @@ function TimelogFormController(timelogService,activityService, $cookies) {
         var parentControllerHasSetData = angular.isDefined(vm.data);
         vm.date = parentControllerHasSetData ? vm.data.date : '';
         vm.time = parentControllerHasSetData ? vm.data.time : '';
-        vm.activityID  = parentControllerHasSetData ? vm.data.activityID  : '';
+        vm.title  = parentControllerHasSetData ? vm.data.title  : '';
     }
 
-    function onUserDidSubmitTimeLog(date, time, title) {
+    function onUserDidSubmitTimeLog(date, time, title , check) {
 
         var ids = $cookies.get('username');
-        return timelogService.create( date, time, title, ids)
+        if (check == true) {
+            return timelogService.create(date, time, title, ids)
+                .then(logService.create(date, title, ids))
                 .then(vm.timelogsController.refreshTimelog())
                 .then(onUserDidResetTimeLog)
                 .catch(vm.showError);
+        }
+        else {
+
+        return timelogService.create(date, time, title, ids)
+            .then(vm.timelogsController.refreshTimelog())
+            .then(onUserDidResetTimeLog)
+            .catch(vm.showError);
+           }
     }
 
     function refreshActivities() {
@@ -34,7 +44,7 @@ function TimelogFormController(timelogService,activityService, $cookies) {
     function onUserDidResetTimeLog() {
         vm.date = '';
         vm.time = '';
-        vm.activityID  = '';
+        vm.title  = '';
         vm.timelogForm.$setPristine();
         vm.timelogForm.$setUntouched();
     }

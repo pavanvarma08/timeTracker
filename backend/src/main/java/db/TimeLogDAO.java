@@ -20,14 +20,17 @@ public interface TimeLogDAO {
     @SqlQuery("SELECT * FROM `timelog`")
     List<TimeLog> list();
 
-    @SqlQuery("SELECT SUM(time) FROM `timelog` WHERE title= :title")
-    TimeLog time(@Bind("activityID") String title);
+    @SqlQuery("SELECT title, SUM(time) FROM `timelog` WHERE title= :title")
+    TimeLog time(@Bind("title") String title);
 
     @SqlQuery("SELECT * FROM `timelog` WHERE timeID= :timeID")
     TimeLog findByTime( @Bind("timeID") Integer timeID);
 
     @SqlQuery("SELECT * FROM `timelog` WHERE username= :username")
     List<TimeLog> listofuser( @Bind("username") String username);
+
+    @SqlQuery("SELECT * FROM `timelog` WHERE title= :title")
+    List<TimeLog> listofactivity( @Bind("title") String title);
 
     @SqlUpdate (" DELETE FROM `timelog` WHERE timeID = :timeID")
     int deleteByTime(@Bind("timeID") Integer timeID);

@@ -54,6 +54,13 @@ public class TimeLogProcessDbimpl implements TimeLogProcess {
 
     }
 
+
+    @Override
+    public List<TimeLog> findActivity(String title)
+    {
+        return this.timelogDAO.listofactivity(title);
+
+    }
     @Override
     public void delete(Integer timeID) {
         this.timelogDAO.deleteByTime(timeID);

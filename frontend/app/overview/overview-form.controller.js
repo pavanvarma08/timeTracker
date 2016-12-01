@@ -17,8 +17,8 @@ function OverviewFormController(timelogService, activityService, userService) {
        vm.overview=[];
     }
 
-    function onAdminDidSubmit(userId) {
-        return timelogService.find(userId)
+    function onAdminDidSubmit(username) {
+        return timelogService.list(username)
             .then(function searchedtimelogs(response) {
                     vm.overview= response.data;
                 });
@@ -45,9 +45,9 @@ function OverviewFormController(timelogService, activityService, userService) {
     function onAdminDidReset() {
         vm.date = '';
         vm.time = '';
-        vm.activityID  = '';
-        vm.overviewAdmin.$setPristine();
-        vm.overviewAdmin.$setUntouched();
+        vm.title  = '';
+        vm.overviewForm.$setPristine();
+        vm.overviewForm.$setUntouched();
     }
 
     function showError(response) {

@@ -4,7 +4,6 @@ import db.entity.TimeLog;
 import javassist.NotFoundException;
 import process.TimeLogProcess;
 
-import javax.annotation.security.PermitAll;
 import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -28,10 +27,24 @@ public class TimeLogResource {
 
     @GET
     @Path("/{username}")
-    public List<TimeLog> timeloguser( @PathParam("username") String username) {
+    public List<TimeLog> timeloguser(@PathParam("username")String username) {
         return this.timelogProcess.findTimelog(username);
     }
 
+/*
+    @GET
+    @Path("{title}")
+    public List<TimeLog> timelogActivity( @PathParam("title") String title) {
+        return this.timelogProcess.findActivity(title);
+    }
+*/
+
+  /* @GET
+    @Path("/title")
+    public TimeLog totaltime( String title) {
+        return this.timelogProcess.addTime(title);
+    }
+*/
     @POST
     public TimeLog createTimeLog(TimeLog timelog)
     {

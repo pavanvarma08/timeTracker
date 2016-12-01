@@ -21,7 +21,7 @@
                 <li><a ng-href="#/users" ng-if="(vm.hasCookies() && vm.adminCheck == 'TRUE')">User Page</a></li>
                 <li><a ng-href="#/overview" ng-if="(vm.hasCookies() && vm.adminCheck == 'TRUE')">Overview</a></li>
                 <li ><a ng-href="#/timelogs"  ng-if="(vm.hasCookies() && vm.adminCheck == 'FALSE')">Timelog</a></li>
-                <li><a ng-href="#/overviewUser"  ng-if="(vm.hasCookies() && vm.adminCheck == 'FALSE')">OverviewU</a></li>
+                <li><a ng-href="#/overviews"  ng-if="(vm.hasCookies() && vm.adminCheck == 'FALSE')">OverviewU</a></li>
 
                 <!--<li><a href="#/" ng-if="!vm.hasCookies()"> LOGIN</a></li>-->
                 <li  ng-if="vm.hasCookies()"><a type = "btn" ng-click="vm.logout()"> <b>LOGOUT</b></a></li>

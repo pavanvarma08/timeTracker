@@ -1,5 +1,6 @@
 
 import db.ActivityDAO;
+import db.LogDAO;
 import db.UserDAO;
 import db.TimeLogDAO;
 import process.*;
@@ -11,6 +12,7 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import org.h2.tools.Server;
 import org.skife.jdbi.v2.DBI;
+import resource.LogResource;
 import resource.TimeLogResource;
 import resource.UserResource;
 
@@ -30,27 +32,32 @@ public class TheTimeTrackerApplication extends Application<TimeTrackerConfigurat
         final UserDAO userDAO = dbi.onDemand(UserDAO.class);
         final ActivityDAO activityDAO = dbi.onDemand(ActivityDAO.class);
         final TimeLogDAO timeLogDAO = dbi.onDemand(TimeLogDAO.class);
+        final LogDAO logDAO = dbi.onDemand(LogDAO.class);
 
         // tables
         userDAO.createTable();
         activityDAO.createTable();
         timeLogDAO.createTable();
+        logDAO.createTable();
 
 
         // processes
         UserProcess userprocess = new UserProcessDbImpl(userDAO);
         ActivityProcess activityProcess = new ActivityProcessDbImpl(activityDAO);
         TimeLogProcess timeLogProcess = new TimeLogProcessDbimpl(timeLogDAO);
+        LogProcess logProcess = new LogProcessDbimpl(logDAO);
 
         // resources
         UserResource userResource = new UserResource(userprocess);
         ActivityResource activityResource = new ActivityResource(activityProcess);
         TimeLogResource timeLogResource = new TimeLogResource(timeLogProcess);
+        LogResource logResource = new LogResource(logProcess);
 
         // environment
        environment.jersey().register(userResource);
         environment.jersey().register(activityResource);
         environment.jersey().register(timeLogResource);
+        environment.jersey().register(logResource);
     }
 
     @Override
