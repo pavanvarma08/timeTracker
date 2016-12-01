@@ -27,7 +27,7 @@ function loginService($http, $interpolate, $cookies) {
     function ClearCredentials() {
         $http.defaults.headers.common.Authorization = 'Basic';
         $cookies.remove('authdata');
-        $cookies.remove('userId');
+        $cookies.remove('userid');
         $cookies.remove('username');
         $cookies.remove('adminCheck');
         //$rootScope.globals = {};

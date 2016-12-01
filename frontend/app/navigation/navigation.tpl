@@ -14,10 +14,17 @@
             <ul class="nav navbar-nav navbar-right">
 
 
-                <li ><a ng-href="#/activity" >Activity</a></li>
-                <li><a ng-href="#/users">User Page</a></li>
-                <li><a ng-href="#/overview">Overview</a></li>
-                <li><a ng-href="#/">Logout</a></li>
+
+
+
+                <li ><a ng-href="#/activity"  ng-if="(vm.hasCookies() && vm.adminCheck == 'TRUE')">Activity</a></li>
+                <li><a ng-href="#/users" ng-if="(vm.hasCookies() && vm.adminCheck == 'TRUE')">User Page</a></li>
+                <li><a ng-href="#/overview" ng-if="(vm.hasCookies() && vm.adminCheck == 'TRUE')">Overview</a></li>
+                <li ><a ng-href="#/timelogs"  ng-if="(vm.hasCookies() && vm.adminCheck == 'FALSE')">Timelog</a></li>
+                <li><a ng-href="#/overviewUser"  ng-if="(vm.hasCookies() && vm.adminCheck == 'FALSE')">OverviewU</a></li>
+
+                <!--<li><a href="#/" ng-if="!vm.hasCookies()"> LOGIN</a></li>-->
+                <li  ng-if="vm.hasCookies()"><a type = "btn" ng-click="vm.logout()"> <b>LOGOUT</b></a></li>
 
 
 
@@ -25,88 +32,3 @@
         </div>
     </div>
 </nav>
-
-
-<!--div class="page-header">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#/info">Time Tracker</a>
-            </div>
-
-            <ul class="topnav pull-right" id="myTopnav">
-                <li><a ng-href="#/activity" >Activity</a></li>
-                <li><a ng-href="#/users">User Page</a></li>
-                <li><a ng-href="#/timelogs">Timelog</a></li>
-
-            </ul>
-
-            </div>
-        </div-->
-
-        <!--div class="btn-group pull-right">
-            <a ng-href="#/" class="btn btn-default">Home Page</a>
-            <a ng-href="#/users" class="btn btn-default">User Page</a>
-            <a ng-href="#/timelogs" class="btn btn-default">Timelog</a>
-        </div-->
-
-            <!--div class="collapse navbar-collapse navHeaderCollapse">
-
-                <ul class="nav navbar-nav navbar-right"  >
-                    <li class="active"><a href="#">Overview</a> </li>
-
-                    <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">My Activities<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">View New Activities</a> </li>
-                            <li><a href="#">View Ongoing Activities</a> </li>
-                            <li><a href="#">View Completed Activities</a> </li>
-
-                        </ul>
-                    </li>
-                    <li>Welcome User</li>
-
-                    <li><a ng-href="#/">Logout</a></li>
-                </ul>
-
-
-            </div-->
-            <!--/div>
-        </div>
-
-
-    </div-->
-
-    <!--div class="page-header">
-        <div class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Time Tracker</a>
-                </div>
-                <!--center>
-                    <div class="navbar-collapse collapse" id="navbar-main">
-
-                        <form class="navbar-form navbar-right" role="search">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="username" placeholder="Username">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="password" placeholder="Password">
-                            </div>
-                            <button type="submit" class="btn btn-xs btn-success">Sign In</button>
-                        </form>
-                    </div>
-                </center-->
-        <!--/div>
-    </div>
-</div-->

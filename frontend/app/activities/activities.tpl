@@ -7,10 +7,10 @@
     <div class="row">
 
 
-        {{vm.uid}} {{vm.us}}  Welcome  {{vm.usero}}
+        Welcome  {{vm.hello.username}}
         <activity-form class="col-xs-12"></activity-form>
 <h1>
-    {{vm.hello.userId}}</h1>
+    </h1>
 
         <div class="col-xs-12 text-center" ng-if="!vm.hasActivities()">
             <div class="alert alert-info" role="alert">

@@ -1,28 +1,28 @@
-<nav class="navbar navbar-default navbar-fixed-top " style="background: black" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbarCollapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+<!--<nav class="navbar navbar-default navbar-fixed-top " style="background: black" role="navigation">-->
+    <!--<div class="container-fluid">-->
+        <!--<div class="navbar-header">-->
+            <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbarCollapse">-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
 
-            <a class="navbar-brand">Timetracker</a>
-        </div>
+            <!--<a class="navbar-brand">Timetracker</a>-->
+        <!--</div>-->
 
-        <div class="collapse navbar-collapse navbarCollapse">
-            <ul class="nav navbar-nav navbar-right">
-
-
-                <li ><a ng-href="#/timelogs">Timelog</a></li>
-                <li><a ng-href="#/overviewUser">Overview</a></li>
-                <li><a ng-href="#/">Logout</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+        <!--<div class="collapse navbar-collapse navbarCollapse">-->
+            <!--<ul class="nav navbar-nav navbar-right">-->
 
 
+                <!--<li ><a ng-href="#/timelogs">Timelog</a></li>-->
+                <!--<li><a ng-href="#/overviewUser">Overview</a></li>-->
+                <!--<li><a ng-href="#/">Logout</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</nav>-->
+
+<navigation class="row"></navigation>
 <div class="container">
 
     <div class="row">

@@ -131,8 +131,12 @@ angular.module('app', ['ngRoute', 'ngCookies'])
         controllerAs: 'vm'
     })
 
-    .component('adminnavigation', { templateUrl: 'app/navigation/adminnavigation.tpl' })
-    .component('navigation', { templateUrl: 'app/navigation/navigation.tpl' })
+    .component('navigation', {
+        templateUrl: 'app/navigation/navigation.tpl',
+        controller: NavigationController,
+        controllerAs: 'vm'
+    })
+
     .component('info', { templateUrl: 'app/navigation/info.tpl' })
 
     .config(appConfig)

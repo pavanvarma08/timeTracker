@@ -31,9 +31,9 @@
             <label class="switch">
                 <input id="adminCheck" type="checkbox" name="adminCheck" class="form-control"
                        ng-model="vm.adminCheck"
-                       ng-true-value="1"
-                       ng-false-value="0"
-                       ng-checked="checkbox == 1" />
+                       ng-true-value="true"
+                       ng-false-value="false"
+                       ng-checked="checkbox == true" />
                 <!--input  name="adminCheck" class="form-control" ng-model="vm.adminCheck" type='hidden' value='0' placeholder="Admin Check" required="">
                 <input id="adminCheck" name="adminCheck" class="form-control" ng-model="vm.adminCheck" type="checkbox" value='1' placeholder="Admin Check" required=""-->
                 <div class="slider round"></div>
