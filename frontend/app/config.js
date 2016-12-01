@@ -1,11 +1,11 @@
 function appConfig($routeProvider, $httpProvider) {
     $routeProvider
         .when('/', {template: '<login-form></login-form>'})
-        .when('/activity', { template: '<activities></activities>' })
-        .when('/users', { template: '<users></users>' })
-        .when('/overview', { template: '<overview-form></overview-form>'})
-        .when('/overviews', {template: '<overviews></overviews>'})
-        .when('/timelogs', {template: '<timelogs></timelogs>'})
+        .when('/activity', { template: '<activities></activities>' ,resolve:{loggedIn:onlyLoggedIn}})
+        .when('/users', { template: '<users></users>' ,resolve:{loggedIn:onlyLoggedIn}})
+        .when('/overview', { template: '<overview-form></overview-form>' ,resolve:{loggedIn:onlyLoggedIn}})
+        .when('/overviews', {template: '<overviews></overviews>',resolve:{loggedIn:onlyLoggedIn}})
+        .when('/timelogs', {template: '<timelogs></timelogs>',resolve:{loggedIn:onlyLoggedIn}})
         .when('/info', {template: '<info></info>'})
         .otherwise({
             redirectTo: '/'
@@ -14,7 +14,7 @@ function appConfig($routeProvider, $httpProvider) {
 }
 
 
-/*var onlyLoggedIn = function ($location,$q,$cookies) {
+var onlyLoggedIn = function ($location,$q,$cookies) {
  var deferred = $q.defer();
  var authdata = $cookies.get('authdata') || null;
 
@@ -30,4 +30,3 @@ function appConfig($routeProvider, $httpProvider) {
  return deferred.promise;
  }
 
- */

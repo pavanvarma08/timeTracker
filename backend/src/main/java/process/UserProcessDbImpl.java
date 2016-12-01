@@ -26,13 +26,7 @@ public class UserProcessDbImpl implements UserProcess{
 
                 .orElseThrow(() -> new NotAuthorizedException("Invalid Credentials"));
     }
-    /*@Override
-    public User verify(String username, String password, User user) throws NotAuthorizedException{
-        return Optional
-                .ofNullable(this.userDAO.verifyBy(username, password))
 
-                .orElseThrow(() -> new NotAuthorizedException("Invalid Credentials"));
-    }*/
     @Override
     public User create(User user) {return this.userDAO.findBy(this.userDAO.create(user)); }
 

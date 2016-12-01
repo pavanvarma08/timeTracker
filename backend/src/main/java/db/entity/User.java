@@ -4,7 +4,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
-public class User {
+import javax.security.auth.Subject;
+import java.security.Principal;
+
+public class User implements Principal {
 
     @JsonProperty
     private Integer userId;
@@ -28,11 +31,17 @@ public class User {
 
     @JsonProperty
     @NotEmpty
-    private Integer adminCheck;
+    private String adminCheck;
 
     public User() {}
 
-    public User (Integer userId, String username, String password, String firstname, String lastname, Integer adminCheck)
+    public User(String username, String password) {
+
+        this.username = username;
+        this.password = password;
+    }
+
+    public User (Integer userId, String username, String password, String firstname, String lastname, String adminCheck)
     {
         this.userId = userId;
         this.username = username;
@@ -41,6 +50,9 @@ public class User {
         this.lastname = lastname;
         this.adminCheck = adminCheck;
     }
+
+
+
 
     public Integer getuserId(){ return userId;}
 
@@ -62,8 +74,13 @@ public class User {
 
     public void setLastname(String lastname) { this.lastname = lastname;}
 
-    public Integer getAdminCheck(){ return adminCheck;}
+    public String getAdminCheck(){ return adminCheck;}
 
-    public void setAdminCheck(Integer adminCheck){ this.adminCheck = adminCheck;}
+    public void setAdminCheck(String adminCheck){ this.adminCheck = adminCheck;}
 
+
+    @Override
+    public String getName() {
+        return null;
+    }
 }

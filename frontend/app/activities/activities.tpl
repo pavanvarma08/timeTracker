@@ -5,8 +5,12 @@
         <h1><p class="bg-primary">ACTIVITY</p></h1>
     </div>
     <div class="row">
-        Welcome {{vm.users.firstname+ " "+ vm.users.lastname}}
+
+
+        {{vm.uid}} {{vm.us}}  Welcome  {{vm.usero}}
         <activity-form class="col-xs-12"></activity-form>
+
+
 
         <div class="col-xs-12 text-center" ng-if="!vm.hasActivities()">
             <div class="alert alert-info" role="alert">
@@ -15,6 +19,9 @@
             </div>
         </div>
     </div>
+
+
+
     <!--div class="form-group">
         <label for="repeatSelect"> Activities </label>
         <select name="repeatSelect" id="repeatSelect" ng-model="data">

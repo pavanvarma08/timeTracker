@@ -11,7 +11,11 @@ function LoginFormController(loginService, $location) {
     vm.showSuccess = showSuccess;
 
     function $onInit() {
-        loginService.ClearCredentials();
+       // loginService.ClearCredentials();
+
+        var parentControllerHasSetData = angular.isDefined(vm.data);
+        vm.username = parentControllerHasSetData ? vm.data.username : '';
+        vm.password = parentControllerHasSetData ? vm.data.password : '';
 
     }
 
@@ -21,9 +25,10 @@ function LoginFormController(loginService, $location) {
         {
             if(response.status == 200)
             {
-                loginService.SetCredentials(username, password);
-              //  console.log(response.data.adminCheck);
-                if (response.data.adminCheck === 1) { $location.path('/activity'); }
+                loginService.SetCredentials(username, password, response.data.userId,response.data.adminCheck);
+              // console.log(response.data.userId);
+               //console.log(response.data.adminCheck);
+                if (response.data.adminCheck == "TRUE") { $location.path('/activity'); }
                 else { $location.path('/timelogs') }
             }
             else
@@ -55,34 +60,6 @@ function LoginFormController(loginService, $location) {
 
     }
 }
-
-
-
-/*var parentControllerHasSetData = angular.isDefined(vm.data);
- vm.username = parentControllerHasSetData ? vm.data.username : '';
- vm.password = parentControllerHasSetData ? vm.data.password : '';
- vm.run();
- }*/
-
-/*    function login() {
- vm.dataLoading = true;
- loginService.Login(vm.username, vm.password, function (response) {
- if(response.success) {
- loginService.SetCredentials(vm.username, vm.password);
- $location.path('/');
- }
- else
- {
- FlashService.ERROR(response.message);
- vm.dataLoading = false;
- }
-
- })
-
- }*/
-
-
-
 
 
 

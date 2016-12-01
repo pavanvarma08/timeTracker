@@ -1,17 +1,29 @@
-function ActivitiesController(activityService, userService) {
+function ActivitiesController(activityService, userService, $cookies) {
     var vm = this;
 
     vm.$onInit = $onInit;
     vm.refreshActivities = refreshActivities;
     vm.hasActivities = hasActivities;
     vm.myFunction = myFunction;
-
+   // vm.hasCookies = hasCookies;
     function $onInit() {
         vm.activities = [];
+        vm.u_id =[];
         vm.refreshActivities();
        vm.myFunction();
     }
 
+  /*  function hasCookies() {
+        var authdata = $cookies.get('authdata') || null;
+        vm.user = $cookies.get('userId');
+        vm.names = $cookies.get('username');
+        //console.log(role);
+        if (authdata!= null){
+            vm.products= [1];
+        }
+
+    }
+*/
     //Search panel JS
     function myFunction()
     {
@@ -36,6 +48,10 @@ function ActivitiesController(activityService, userService) {
     function refreshActivities() {
         return activityService.list().then(function refreshedActivities(response) {
             vm.activities = response.data;
+
+            vm.us= $cookies.get('adminCheck');
+            vm.usero = $cookies.get('username');
+            vm.uid= $cookies.get('userId');
         });
     }
     function refreshUsers() {

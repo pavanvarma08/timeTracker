@@ -1,6 +1,3 @@
-/**
- * Created by putty on 11/15/16.
- */
 function loginInterceptor() {
 
     console.log("test")

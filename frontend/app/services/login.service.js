@@ -2,7 +2,7 @@
  * Created by putty on 11/15/16.
  */
 
-function loginService($http, $interpolate, $rootScope) {
+function loginService($http, $interpolate, $cookies) {
 
     var login = $interpolate('/api/login');
 
@@ -10,7 +10,6 @@ function loginService($http, $interpolate, $rootScope) {
     return {
 
         signIn: signIn,
-        // signOut: signOut,
         ClearCredentials: ClearCredentials,
         SetCredentials: SetCredentials
     };
@@ -25,39 +24,31 @@ function loginService($http, $interpolate, $rootScope) {
         return $http.post(login(), data);
     }
 
-
-    /*function signOut() {
-
-     }*/
     function ClearCredentials() {
         $http.defaults.headers.common.Authorization = 'Basic';
-        //$cookies.remove('authdata');
-        $rootScope.globals = {};
+        $cookies.remove('authdata');
+        $cookies.remove('userId');
+        $cookies.remove('username');
+        $cookies.remove('adminCheck');
+        //$rootScope.globals = {};
         //  $cookieStore.remove('globals');
-        $http.defaults.headers.common.Authorization = 'Basic';
+        //$http.defaults.headers.common.Authorization = 'Basic';
 
     }
 
-    function SetCredentials(username, password) {
+    function SetCredentials(username, password, userId, adminCheck) {
 
-        var authdata = Base64.encode(username + ':' + password);
-
-        $rootScope.globals = {
-            currentUser: {
-                username: username,
-                authdata: authdata
-            }
-        }
-        console.log($http.defaults.headers.common.Authorization);
         var authdata = Base64.encode(username + ':' + password);
         $http.defaults.headers.common['Authorization'] = 'Basic' + authdata;
         console.log($http.defaults.headers.common.Authorization);
 
-        // $cookies.put('authdata' , authdata);*/
+        $cookies.put('authdata', authdata);
+        $cookies.put('userid', userId);
+        $cookies.put('username', username);
+        $cookies.put('adminCheck', adminCheck);
 
-    };
+    }
 
-    // $cookieStore.put('globals', $rootScope.globals);
 
 }
 
@@ -100,22 +91,4 @@ var Base64 = {
         return output;
     }
 }
-
-
-
-
-/*$timeout(function () {
- var response;
- UserService.GetByUsername(username)
- .then(function (user) {
- if (user !== null && user.password === password) {
- response = {success: true};
- } else {
- response = {success: false, message: 'Username or password is incorrect'};
- }
- callback(response);
- });
- }, 1000);
- */
-
 

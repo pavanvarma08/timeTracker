@@ -1,4 +1,4 @@
-angular.module('app', ['ngRoute'])
+angular.module('app', ['ngRoute', 'ngCookies'])
     .factory('activityService', activityService)
     .factory('userService', userService)
     .factory('timelogService', timelogService)
@@ -38,7 +38,7 @@ angular.module('app', ['ngRoute'])
     .component('activities',{
         templateUrl: 'app/activities/activities.tpl',
         controller: ActivitiesController,
-        controllerAs: 'vm',
+        controllerAs: 'vm'
     })
 
         //LOGIN
@@ -87,7 +87,7 @@ angular.module('app', ['ngRoute'])
     .component('users',{
         templateUrl: 'app/users/users.tpl',
         controller: UsersController,
-        controllerAs: 'vm',
+        controllerAs: 'vm'
     })
 
     //TIMELOG COMPONENTS
@@ -109,7 +109,7 @@ angular.module('app', ['ngRoute'])
     .component('timelogs',{
         templateUrl: 'app/timelog/timelogs.tpl',
         controller: TimelogsController,
-        controllerAs: 'vm',
+        controllerAs: 'vm'
     })
 
 
@@ -128,47 +128,22 @@ angular.module('app', ['ngRoute'])
     .component('overviews', {
         templateUrl: 'app/overview/overviews.tpl',
         controller:OverviewsController ,
-        controllerAs: 'vm',
+        controllerAs: 'vm'
     })
 
     .component('adminnavigation', { templateUrl: 'app/navigation/adminnavigation.tpl' })
     .component('navigation', { templateUrl: 'app/navigation/navigation.tpl' })
     .component('info', { templateUrl: 'app/navigation/info.tpl' })
 
-    .config(appConfig);
+    .config(appConfig)
+    .run(run);
 
+function run($http, $cookies) {
 
+    var authdata = $cookies.get('authdata') || null;
 
+    if(authdata!= null){
+        $http.defaults.headers.common['Authorization'] ='Basic ' + authdata;
+    }
 
-//.run(run);
-
-/*run.$inject = ['$rootScope', '$location', '$cookieStore', '$http'];
- function run($rootScope, $location, $cookieStore, $http) {
- // keep user logged in after page refresh
- $rootScope.globals = $cookieStore.get('globals') || {};
- if ($rootScope.globals.currentUser) {
- $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata; // jshint ignore:line
- }
-
- $rootScope.$on('$locationChangeStart', function (event, next, current) {
- // redirect to login page if not logged in and trying to access a restricted page
- var restrictedPage = $.inArray($location.path(), ['/login', '/register']) === -1;
- var loggedIn = $rootScope.globals.currentUser;
- if (restrictedPage && !loggedIn) {
- $location.path('/login');
- }
- });
-
-
- };
-
- /*function run($http, $cookies) {
-
- var authdata = $cookies.get('authdata') || null;
-
- if (authdata != null) {
- $http.defaults.headers.common['Authorization'] = 'Basic' + authdata;
- }
- }
- */
-
+}
