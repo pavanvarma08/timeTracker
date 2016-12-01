@@ -1,14 +1,19 @@
 <div class="container">
     <navigation class="row"></navigation>
-
-    <div class="text-center">
-        <h1> <p class="bg-primary"> OVERVIEW </p></h1>
+    <div class="row"></div>
+    <div class="col-xs-12">
+    <div class="col-xs-7 text-right">
+        <h1> <p class="text-primary"> OVERVIEW </p></h1>
+    </div>
+    <div class="col-xs-5 text-right">
+        <h1>   <b>{{vm.hello.username}}</b></h1></div>
     </div>
 
     <div class="row">
 
         <div class="col-xs-3"></div>
         <div class="col-xs-6">
+            <div class="col-xs-12"></div>
 
 <form name="vm.overviewForm" ng-submit="vm.viewAdmin(vm.username)" class="form-horizontal">
        <div class="form-group">

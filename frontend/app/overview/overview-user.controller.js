@@ -59,6 +59,7 @@ function OverviewUserController(timelogService, activityService, userService, lo
     function refreshActivities() {
         return activityService.list().then(function refreshedActivities(response) {
             vm.activities = response.data;
+            vm.hello = $cookies.getAll();
         });
     }
 

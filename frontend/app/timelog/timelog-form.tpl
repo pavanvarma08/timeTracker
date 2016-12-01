@@ -3,7 +3,7 @@
 <form name="vm.timelogForm" ng-submit="vm.sendTimeLog(vm.date, vm.time, vm.title, vm.check)" class="form-horizontal">
     <div class="panel-body">
         <div class="form-group">
-            <label  class="col-sm-2 control-label" for="title"> Activities Title  </label>
+            <label  class="col-sm-5 control-label" for="title"> Activities Title  </label>
             <div class="col-sm-5">
             <select name="title" id="title" ng-model="vm.title">
                 <option ng-repeat="activity in vm.activities" value="{{activity.title}}">{{activity.title}}</option>
@@ -12,21 +12,21 @@
         </div>
         <div class="form-group">
 
-            <label class="col-sm-2 control-label" for="date">Date</label>
+            <label class="col-sm-5 control-label" for="date">Date</label>
             <div class="col-sm-5">
             <input id="date" name="date" class="form-control" ng-model="vm.date" type="date" >
             </div>
         </div>
         <div class="form-group">
 
-            <label class="col-sm-2 control-label" for="time">time </label>
+            <label class="col-sm-5 control-label" for="time">time </label>
             <div class="col-sm-5">
             <input id="time" name="time" class="form-control" ng-model="vm.time" type="number" placeholder="hours worked" autocomplete="off" required = " ">
             </div>
         </div>
 
         <div class="form-group">
-            <label class="col-sm-2 control-label"  class="col-md-4 control-label" for="check">Check when done</label>
+            <label class="col-sm-5 control-label" for="check">Check when done</label>
             <label class="switch">
                 <input id="check" type="checkbox" name="check" class="form-control"
                        ng-model="vm.check"

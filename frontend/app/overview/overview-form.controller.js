@@ -1,4 +1,4 @@
-function OverviewFormController(timelogService, activityService, userService, logService) {
+function OverviewFormController(timelogService, activityService, userService, logService, $cookies) {
     var vm = this;
     vm.$onInit = $onInit;
 
@@ -38,6 +38,7 @@ function OverviewFormController(timelogService, activityService, userService, lo
     function refreshTimelog() {
         return timelogService.list().then(function refreshedTimelog(response) {
             vm.timelogs = response.data;
+            vm.hello = $cookies.getAll();
         });
     }
 

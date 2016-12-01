@@ -37,7 +37,7 @@ function TimelogsController(timelogService,activityService,userService, $cookies
         var news = $cookies.get('username');
         return timelogService.list(news).then(function refreshedTimelog(response) {
             vm.timelogs = response.data;
-            vm.ho= $cookies.getAll();
+            vm.hello = $cookies.getAll();
         });
     }
     function hasTimelog() {

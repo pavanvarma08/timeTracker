@@ -1,7 +1,7 @@
 /**
  * Created by Mini on 16/11/07.
  */
-function UsersController(userService) {
+function UsersController(userService, $cookies) {
     var vm = this;
 
     vm.$onInit = $onInit;
@@ -64,6 +64,7 @@ function UsersController(userService) {
     function refreshUsers() {
         return userService.list().then(function refreshedUsers(response) {
             vm.users = response.data;
+            vm.hello = $cookies.getAll();
         });
     }
 

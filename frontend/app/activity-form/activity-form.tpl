@@ -11,14 +11,14 @@
         <!--</div>-->
         <div class="form-group">
 
-            <label class="col-sm-2 control-label" for="title">Activity title</label>
+            <label class="col-sm-5 control-label" for="title">Activity title</label>
             <div class="col-sm-5">
             <input id="title" name="title" class="form-control" ng-model="vm.title" type="text" placeholder="Title of activity" autocomplete="off" required = " ">
             </div>
         </div>
 
         <div class="form-group">
-            <label class="col-sm-2 control-label" for="description">Activity Description</label>
+            <label class="col-sm-5 control-label" for="description">Activity Description</label>
             <div class="col-sm-5">
             <textarea id="description" name="description" class="form-control" ng-model="vm.description" placeholder="The description of your activity ..." required=""></textarea>
             </div>

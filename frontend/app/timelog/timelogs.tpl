@@ -1,13 +1,18 @@
 
 <navigation class="row"></navigation>
 <div class="container">
+    <div class="text-center">
+        <h1> Welcome  <b>{{vm.hello.username}}</b></h1></div>
 
     <div class="row text-center text-capitalize">
-        <h1><p class="bg-primary">Timelog</p></h1>
+        <h1><p class="text-primary">Timelog</p></h1>
         </div>
     <div class="row">
-        <timelog-form class="row"></timelog-form>
-
+        <div class="col-xs-3"></div>
+        <timelog-form class="col-xs-6"></timelog-form>
+        <div class="col-xs-3"></div>
+    </div>
+    <div class="row">
         <div class="col-xs-12 text-center" ng-if="!vm.hasTimelog()">
             <div class="alert alert-info" role="alert">
                 <h4>Nothing here</h4>

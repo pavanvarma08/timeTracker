@@ -1,9 +1,15 @@
 <div class="container">
 
     <navigation class="row"></navigation>
-<div class="text-center">
-    <h1><p class="bg-info">New Employee Details</p></h1>
+    <div class="row"></div>
+    <div class="col-xs-12">
+<div class=" col-xs-8 text-right .text-primary">
+    <h1>New Employee Details</h1>
+
 </div>
+        <div class="col-xs-4 text-right">
+            <h1>   <b>{{vm.hello.username}}</b></h1></div>
+    </div>
     <!--adminnavigation class="row"></adminnavigation-->
 
 

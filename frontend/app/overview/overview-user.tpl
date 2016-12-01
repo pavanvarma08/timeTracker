@@ -6,7 +6,8 @@
     <!--</div>-->
 
 
-
+    <div class="text-right">
+        <h1> <b>{{vm.hello.username}}</b></h1></div>
 
 
     <div class="row">
