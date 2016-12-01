@@ -30,7 +30,7 @@ public class LogResource {
     {
         return this.logProcess.create(log);
     }
-
+/*
     @PUT
     @Path("/{logID}")
     public Log updateLog(@PathParam("logID") Integer logID,@Valid Log log) throws NotFoundException {
@@ -41,4 +41,5 @@ public class LogResource {
     public void deleteLog ( @PathParam("logID") Integer logID) {
         this.logProcess.delete(logID);
     }
+    */
 }

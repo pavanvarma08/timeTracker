@@ -1,16 +1,18 @@
 <div class="container">
     <navigation class="row"></navigation>
 
-    <div class="text-center">
-        <h1> <p class="bg-primary"> OVERVIEW </p></h1>
-    </div>
+    <!--<div class="text-center">-->
+        <!--<h1> <p class="bg-primary"> OVERVIEW </p></h1>-->
+    <!--</div>-->
+
+
 
 
 
     <div class="row">
         <div class="col-xs-3"></div>
         <div class="col-xs-6">
-            <div class="panel panel-default">
+            <!--div class="panel panel-default">
 <form name="vm.overviewUser" ng-submit="vm.viewUser(vm.title)" class="form-horizontal">
     <div class="panel-body ">
     <div class="row">
@@ -22,10 +24,6 @@
         </div>
     </div>
     </div>
-        <!--<div class="form-group">-->
-            <!--<label for="date">Date</label>-->
-            <!--<input id="date" name="date" class="form-control" ng-model="vm.date" type="date" >-->
-        <!--</div>-->
         <div class="panel-footer text-center">
         <div class="text right">
             <button type="submit" class="btn btn-xs btn-success">Submit</button>
@@ -33,7 +31,7 @@
         </div>
         </div>
 </form>
-            </div>
+            </div-->
         </div>
             <div class="col-xs-3">
 
@@ -68,10 +66,13 @@
             </tbody>
         </table>
     </div-->
-    {{vm.logs}}
+
 
     <div class="col-xs-12 text-center">
         <h1><p class="bg-success"> Completed Activities</p></h1>
+    </div>
+
+    <div class="form-group pull-right col-xs-4"><input type="text" id="myInput" class="search form-control" ng-change="vm.myFunction()" ng-model="value" placeholder="Search for names.."/>
     </div>
     <div class="row">
         <table id="myTable" class="table table-striped table-bordered">
@@ -88,7 +89,7 @@
             <tr ng-repeat="log in vm.logs" data="logs" >
                 <td> {{log.title}}</td>
                 <td> {{log.date}} </td>
-                <td> {{log.totaltime}}</td>
+                <td> {{log.time}}</td>
             </tr>
             </tbody>
         </table>

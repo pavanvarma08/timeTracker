@@ -26,7 +26,7 @@ public class LogProcessDbimpl implements  LogProcess {
         return this.logDAO.findByTime(this.logDAO.create(log));
     }
 
-    @Override
+ /*   @Override
     public Log update(Integer logID, Log updatedLog) throws NotFoundException {
         Log log = this.findTime(logID);
 
@@ -50,7 +50,7 @@ public class LogProcessDbimpl implements  LogProcess {
     @Override
     public void delete(Integer logID) {
         this.logDAO.deleteByTime(logID);
-    }
+    }*/
 }
 
 

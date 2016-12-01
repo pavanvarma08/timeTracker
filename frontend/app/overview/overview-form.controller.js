@@ -1,4 +1,4 @@
-function OverviewFormController(timelogService, activityService, userService) {
+function OverviewFormController(timelogService, activityService, userService, logService) {
     var vm = this;
     vm.$onInit = $onInit;
 
@@ -8,16 +8,27 @@ function OverviewFormController(timelogService, activityService, userService) {
     vm.refreshTimelog = refreshTimelog;
     vm.refreshActivities = refreshActivities;
    vm.refreshUsers = refreshUsers;
+   vm.refreshlog = refreshlog;
     vm.showError = showError;
 
     function $onInit() {
         vm.refreshActivities();
-       vm.refreshTimelog();
-       vm.refreshUsers();
-       vm.overview=[];
+        vm.refreshTimelog();
+        vm.refreshUsers();
+       // vm.refreshlog();
+        vm.overview=[];
+    }
+    function refreshlog() {
+        return logService.list().then(function refreshedUsers(response) {
+            vm.logs = response.data;
+        });
     }
 
     function onAdminDidSubmit(username) {
+
+        logService.view(username).then(function search(response){
+            vm.logs =response.data;})
+
         return timelogService.list(username)
             .then(function searchedtimelogs(response) {
                     vm.overview= response.data;

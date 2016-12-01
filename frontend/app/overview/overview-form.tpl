@@ -6,53 +6,71 @@
     </div>
 
     <div class="row">
+
         <div class="col-xs-3"></div>
         <div class="col-xs-6">
-<div class="panel panel-default">
-<form name="vm.overviewForm" ng-submit="vm.viewAdmin(vm.username)" class="form-horizontal">
-    <div class="panel-body ">
-        <div class="form-group">
-            <label  for="title"> Activities Title </label>
-            <select name="title" id="title" ng-model="vm.title">
-                <option ng-repeat="activity in vm.activities"  value="{{activity.title}}">{{activity.title}}</option>
-            </select>
-        </div>
+
+<form name="vm.overviewForm" ng-submit="vm.viewAdmin(vm.username)" class="form-inline">
        <div class="form-group">
            <div class="text-center">
-           <h3> <p class="bg-info"> Search for particular user </p> </h3>
+           <!--<h3> <p class="bg-info"> Search for particular user </p> </h3>-->
            </div>
-            <label  class="col-sm-4 control-label" for="username"> User List </label>
-           <div class="col-sm-5 -align-center">
+            <label  class="col-xs-6 control-label" for="username"> User List </label>
+           <div class="col-xs-3">
             <select name="username" id="username" ng-model="vm.username">
                 <option ng-repeat="user in vm.users" value="{{user.username}}">{{user.username}}</option>
             </select>
            </div>
-        </div>
-
-    </div>
-    <h1></h1>
-
-        <div class="panel-footer text-center">
-            <button type="submit" class="btn btn-xs btn-success">Submit</button>
-            <button type="reset" class="btn btn-xs btn-default" ng-click="vm.onReset()">Reset</button>
+           <div class="col-xs-3"><button type="submit" class="btn btn-xs btn-success">Submit</button> </div>
         </div>
 </form>
 </div>
+        <div class="col-xs-3"></div>
 
         </div>
         <div class="col-xs-3">
 
         </div>
-    </div>
-{{vm.overview}}
 
-<div class="col-xs-12 text-center">
-<h1><p class="bg-success"> Advanced Search</p></h1>
+
+    <div class="col-xs-12 text-center">
+        <h1><p class="bg-success"> Completed</p></h1>
+    </div>
+    <div class="row">
+        <!--<div class="col-xs-6 text-right">-->
+        <!--<h1>Timelogs</h1>-->
+        <!--</div>-->
+        <table id="myTable1" class="table table-striped table-bordered">
+            <thead class="thead-inverse">
+            <tr>
+                <th> Activity Title </th>
+                <th> Completed on </th>
+                <th> Time Taken</th>
+
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr ng-repeat="log in vm.logs" data="logs" >
+                <td> {{log.title}}</td>
+                <td> {{log.date}} </td>
+                <td> {{log.time}}</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+
+    <div class="col-xs-12 text-center">
+<h1><p class="bg-success"> Timelogs</p></h1>
 </div>
 <div class="row">
-<div class="col-xs-6 text-right">
-    <h1>Timelogs</h1>
-</div>
+<!--<div class="col-xs-6 text-right">-->
+    <!--<h1>Timelogs</h1>-->
+<!--</div>-->
 <table id="myTable" class="table table-striped table-bordered">
     <thead class="thead-inverse">
     <tr>
@@ -80,7 +98,12 @@
 
 </div>
 
-    <div class="text-center">
+
+
+
+
+
+    <!--div class="text-center">
         <h1> <p class="bg-warning"> overall data</p></h1>
 
     </div>
@@ -110,6 +133,7 @@
     </tr>
     </tbody>
 </table>
-</div></div>
+</div--></div>
 
+</div>
 </div>

@@ -1,3 +1,4 @@
+<div class="panel panel-default">
 <form name="vm.userForm" ng-submit="vm.sendUser(vm.username, vm.password, vm.firstname, vm.lastname, vm.adminCheck)" class="panel panel-default">
     <div class="panel-body">
 
@@ -36,13 +37,13 @@
                        ng-checked="checkbox == true" />
                 <!--input  name="adminCheck" class="form-control" ng-model="vm.adminCheck" type='hidden' value='0' placeholder="Admin Check" required="">
                 <input id="adminCheck" name="adminCheck" class="form-control" ng-model="vm.adminCheck" type="checkbox" value='1' placeholder="Admin Check" required=""-->
-                <div class="slider round"></div>
+                <div class="slider round"><h3> &nbsp;&nbsp; {{vm.adminCheck}}</h3></div>
             </label>
 
             <!--input id="adminCheck" name="adminCheck" class="form-control" ng-model="vm.adminCheck" type="checkbox" placeholder="Admin Check" required=""-->
         </div>
-        {{vm.password}}
-        {{vm.adminCheck}}
+
+
     </div>
 
     <div class="panel-footer text-right">
@@ -51,3 +52,4 @@
         <button type="reset" class="btn btn-xs btn-default" ng-click="vm.onReset()">Reset</button>
     </div>
 </form>
+</div>

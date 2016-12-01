@@ -9,7 +9,7 @@ public interface LogProcess {
 
     List<Log> list();
     Log create(Log log);
-    Log update(Integer logID, Log log) throws NotFoundException;
+  /*  Log update(Integer logID, Log log) throws NotFoundException;
    Log findTime(Integer logID) throws NotFoundException;
-    void delete(Integer logID);
+    void delete(Integer logID);*/
 }

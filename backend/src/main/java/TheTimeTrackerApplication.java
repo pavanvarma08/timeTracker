@@ -1,10 +1,7 @@
 
-import db.ActivityDAO;
-import db.LogDAO;
-import db.UserDAO;
-import db.TimeLogDAO;
+import db.*;
 import process.*;
-import resource.ActivityResource;
+import resource.*;
 import com.bazaarvoice.dropwizard.assets.ConfiguredAssetsBundle;
 import io.dropwizard.Application;
 import io.dropwizard.jdbi.DBIFactory;
@@ -12,9 +9,6 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import org.h2.tools.Server;
 import org.skife.jdbi.v2.DBI;
-import resource.LogResource;
-import resource.TimeLogResource;
-import resource.UserResource;
 
 
 @SuppressWarnings("deprecation")
@@ -32,32 +26,37 @@ public class TheTimeTrackerApplication extends Application<TimeTrackerConfigurat
         final UserDAO userDAO = dbi.onDemand(UserDAO.class);
         final ActivityDAO activityDAO = dbi.onDemand(ActivityDAO.class);
         final TimeLogDAO timeLogDAO = dbi.onDemand(TimeLogDAO.class);
-        final LogDAO logDAO = dbi.onDemand(LogDAO.class);
+       // final LogDAO logDAO = dbi.onDemand(LogDAO.class);
+        final DoneDAO doneDAO = dbi.onDemand(DoneDAO.class);
 
         // tables
         userDAO.createTable();
         activityDAO.createTable();
         timeLogDAO.createTable();
-        logDAO.createTable();
+       // logDAO.createTable();
+        doneDAO.createTable();
 
 
         // processes
         UserProcess userprocess = new UserProcessDbImpl(userDAO);
         ActivityProcess activityProcess = new ActivityProcessDbImpl(activityDAO);
         TimeLogProcess timeLogProcess = new TimeLogProcessDbimpl(timeLogDAO);
-        LogProcess logProcess = new LogProcessDbimpl(logDAO);
+    //   LogProcess logProcess = new LogProcessDbimpl(logDAO);
+        DoneProcess doneProcess = new DoneProcessDbimpl(doneDAO);
 
         // resources
         UserResource userResource = new UserResource(userprocess);
         ActivityResource activityResource = new ActivityResource(activityProcess);
         TimeLogResource timeLogResource = new TimeLogResource(timeLogProcess);
-        LogResource logResource = new LogResource(logProcess);
+     //  LogResource logResource = new LogResource(logProcess);
+        DoneResource doneResource = new DoneResource(doneProcess);
 
         // environment
        environment.jersey().register(userResource);
         environment.jersey().register(activityResource);
         environment.jersey().register(timeLogResource);
-        environment.jersey().register(logResource);
+      //  environment.jersey().register(logResource);
+        environment.jersey().register(doneResource);
     }
 
     @Override

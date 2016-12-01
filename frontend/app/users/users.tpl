@@ -8,7 +8,8 @@
 
 
     <div class="row">
-        <user-form class="col-xs-12"></user-form>
+        <div class="col-xs-3"></div>
+        <user-form class="col-xs-6"></user-form>
 
         <div class="col-xs-12 text-center" ng-if="!vm.hasUsers()">
             <div class="alert alert-info" role="alert">
@@ -24,9 +25,9 @@
 
     <div class="form-group pull-right col-xs-4"><input type="text" id="myInput" class="search form-control" ng-change="vm.myFunction()" ng-model="value" placeholder="Search for names.."/>
     </div>
-    <div class="col-xs-6 text-right" >
-        <h1>Users List</h1>
-    </div>
+    <!--<div class="col-xs-6 text-right" >-->
+        <!--<h1>Users List</h1>-->
+    <!--</div>-->
 
 <table id="myTable" class="table table-striped table-bordered">
     <thead class="thead-inverse">
@@ -45,8 +46,7 @@
         <td> {{user.firstname}}</td>
         <td> {{user.lastname}}</td>
         <td>
-{{user.userId}}
-            {{user.username}}
+
             <a ng-click="vm.editUser()" class="btn btn-xs btn-info"><i class="fa fa-pencil-square-o" aria-hidden="true"> </i></a><a ng-click="vm.removeUser()" class="btn btn-xs btn-danger">
 
             <i class="fa fa-trash-o" aria-hidden="true"></i>
